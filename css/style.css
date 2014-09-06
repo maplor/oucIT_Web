@@ -570,7 +570,7 @@ body {
 }
 header .container {
 	padding-top: 1.5em;
-	padding-bottom: 1.5em;
+	padding-bottom: 1.25em;
 	overflow: hidden;
 }
 .logo {
@@ -601,6 +601,82 @@ header .container {
 	color: #333;
 	border-bottom: 5px solid #5a99e0;
 }
+/* focus CSS */
+.focus {
+    height: 365px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2em;
+}
+.focus ul {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    white-space: nowrap;
+    font-size: 0;
+}
+.focus ul li {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+.focus ul li a {
+	display: block;
+}
+.focus ul li img {
+    /*position: absolute;*/
+}
+.focus ul li div {
+    position: absolute;
+    overflow: hidden;
+}
+/*.focus .btnBg {position:absolute; width:800px; height:20px; left:0; bottom:0; background:#000; display:none;}*/
+.focus .btn {
+    position:absolute;
+    /*width:780px;
+    height:23px;*/
+    padding: 0px 10px 0px 10px;
+    left: 50%;
+    bottom: 10px;
+    /*text-align:right;*/
+}
+.focus .btn span {
+    display:inline-block;
+    width:16px;
+    height:16px;
+    _font-size:0;
+    margin: 0px 6px;
+    cursor:pointer;
+    background:#bdc3c7;
+    -webkit-border-radius:8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.focus .btn span.on {
+    background: #fff;
+}
+.focus .preNext {
+    width:45px;
+    height:100px;
+    position:absolute;
+    top: 50%;
+    margin-top: -50px;
+    background:url(../images/focus-sprite.png) no-repeat 0 0;
+    cursor:pointer;
+}
+.focus .pre {
+    left:0;
+}
+.focus .next {
+    right:0;
+    background-position:right top;
+}
+/* Index card */
 .index section.container h1 {
 	display: block;
 	float: left;
@@ -609,7 +685,7 @@ header .container {
 	height: 58px;
 	line-height: 58px;
 	text-indent: -999px;
-	background: #f2f4f5 url(../images/sprite.png) no-repeat top left;
+	background: #f2f4f5 url(../images/index-sprite.png) no-repeat top left;
 }
 .index section.container .more {
 	float: right;
@@ -631,7 +707,7 @@ header .container {
 	height: 3px;
 	margin: 0;
 	border: none;
-	background: url(../images/sprite.png) repeat-x bottom left;
+	background: url(../images/index-sprite.png) repeat-x bottom left;
 }
 .crad-wrapper {
 	padding-top: 1em;
@@ -671,5 +747,61 @@ header .container {
 	position: absolute;
 	bottom: .5em;
 	color: #7f8c8d;
+	font-size: .875em;
 }
-
+.footer {
+	margin-top: 2em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	background: #282829;
+}
+.footer .container {
+	overflow: hidden;
+}
+.blogo {
+	position: relative;
+	float: left;
+	width: 18em;
+	text-align: center;
+}
+.blogo img {
+	opacity: .5;
+	filter: Alpha(opacity=50);
+	-webkit-transition: opacity .4s ease 0;
+	-moz-transition: opacity .4s ease 0;
+	-o-transition: opacity .4s ease 0;
+	transition: opacity .4s ease 0;
+}
+.blogo img:hover {
+	opacity: 1;
+	filter: Alpha(opacity=100);
+}
+.footer-con {
+	float: left;
+	width: 18em;
+	margin-left: 1em;
+}
+.footer-con h3 {
+	margin: 0;
+	color: #b4bbbf;
+	font-size: 1.125em;
+}
+.footer-con ul {
+	margin-top: 1.5em;
+	margin-bottom: 0;
+	padding: 0;
+	list-style: none;
+	color: #787c80;
+}
+.footer-con li a {
+	color: #787c80;
+	text-decoration: none;
+	
+	-webkit-transition: color .2s ease 0;
+	-moz-transition: color .2s ease 0;
+	-o-transition: color .2s ease 0;
+	transition: color .2s ease 0;
+}
+.footer-con li a:hover {
+	color: #b4bbbf;
+}
