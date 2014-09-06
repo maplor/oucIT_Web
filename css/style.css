@@ -559,13 +559,18 @@ body {
 	font-size: 16px;
 	line-height: 1.5em;
 	font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
+	
+	background: #f2f4f5;
 }
 .container {
-	width: 1260px;
+	position: relative;
+	width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 }
 header .container {
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
 	overflow: hidden;
 }
 .logo {
@@ -576,14 +581,94 @@ header .container {
 }
 .nav ul {
 	float: left;
+	margin-top: .5em;
+	margin-bottom: .5em;
+	padding: 0;
 }
 .nav li {
 	float: left;
 }
 .nav li a {
 	display: block;
-	padding: 1em 2em;
+	padding: .5em 1.5em;
+	color: #666;
+	text-decoration: none;
 }
 .nav li a:hover {
-	color: ;
+	color: #5a99e0;
+}
+.nav li a.active {
+	color: #333;
+	border-bottom: 5px solid #5a99e0;
+}
+.index section.container h1 {
+	display: block;
+	float: left;
+	margin: 0;
+	width: 176px;
+	height: 58px;
+	line-height: 58px;
+	text-indent: -999px;
+	background: #f2f4f5 url(../images/sprite.png) no-repeat top left;
+}
+.index section.container .more {
+	float: right;
+	margin-top: 1em;
+	padding-left: .25em;
+	color: #999;
+	text-decoration: none;
+	background: #f2f4f5;
+}
+.index section.container .more:hover {
+	color: #5a99e0;
+}
+.index section.container hr {
+	position: absolute;
+	top: 28px;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 3px;
+	margin: 0;
+	border: none;
+	background: url(../images/sprite.png) repeat-x bottom left;
+}
+.crad-wrapper {
+	padding-top: 1em;
+	margin-left: -1em;
+	clear: both;
+	/*overflow: hidden;*/
+}
+.card {
+	position: relative;
+	float: left;
+	width: 17em;
+	height: 18em;
+	margin-left: 1em;
+	padding: .5em;
+	background: #fff;
+	-webkit-box-shadow: 0 2px 5px #ccc;
+	-moz-box-shadow: 0 2px 5px #ccc;
+	box-shadow: 0 2px 5px #ccc;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=0,strength=1)
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=90,strength=3)
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=180,strength=5)
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);
+}
+.card h2 {
+	margin: 0;
+	font-size: 1.125em;
+}
+.card p {
+	margin-bottom: 0;
+}
+.card a {
+	display: block;
+	color: #2980b9;
+	text-decoration: none;
+}
+.card .time {
+	position: absolute;
+	bottom: .5em;
+	color: #7f8c8d;
 }
