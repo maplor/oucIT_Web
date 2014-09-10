@@ -14,7 +14,7 @@
 			//btn += "<span>"+ii+"</span>"; //带数字
 			btn += "<span>" + "</span>"; //不带数字
 		}
-		btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+		btn += "</div><div class='preNext pre'><div class='pre-btn'></div></div><div class='preNext next'><div class='next-btn'></div></div>";
 		$(slid).append(btn);
 		//$(slid).find("div.btnBg").css("opacity",0.5);
 	
@@ -25,10 +25,10 @@
 		}).eq(0).trigger("mouseenter");
 	
 		//上一页、下一页按钮透明度处理
-		$(slid+" .preNext").css("opacity",0.2).hover(function() {
-			$(this).stop(true,false).animate({"opacity":"0.5"},300);
+		$(slid+" .preNext").css("opacity",0.4).hover(function() {
+			$(this).stop(true,false).animate({"opacity":"0.8"},300);
 		},function() {
-			$(this).stop(true,false).animate({"opacity":"0.2"},300);
+			$(this).stop(true,false).animate({"opacity":"0.4"},300);
 		});
 	
 		//上一页按钮
@@ -49,10 +49,10 @@
 		//$(slid+" ul").css("width",sWidth * (len));
 
 		//当页面宽度改变时，相应改变数据，实现响应式
-		$(window).resize(function(e) {
-			sWidth = $(slid).width();
-			len = $(slid).find("ul li").length;
-		});
+//		$(window).resize(function(e) {
+//			sWidth = $(slid).width();
+//			len = $(slid).find("ul li").length;
+//		});
 
 		//鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
 		$(slid).hover(function() {
