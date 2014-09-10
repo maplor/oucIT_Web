@@ -25,10 +25,10 @@
 		}).eq(0).trigger("mouseenter");
 	
 		//上一页、下一页按钮透明度处理
-		$(slid+" .preNext").css("opacity",0.4).hover(function() {
-			$(this).stop(true,false).animate({"opacity":"0.8"},300);
+		$(slid+" .preNext").css("opacity",0.6).hover(function() {
+			$(this).stop(true,false).animate({"opacity":"0.8"},200);
 		},function() {
-			$(this).stop(true,false).animate({"opacity":"0.4"},300);
+			$(this).stop(true,false).animate({"opacity":"0.6"},200);
 		});
 	
 		//上一页按钮
