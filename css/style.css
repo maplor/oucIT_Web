@@ -602,11 +602,20 @@ header .container {
 	border-bottom: 5px solid #5a99e0;
 }
 /* focus CSS */
+.focus-warp {
+	width: 100%;
+	margin-bottom: 2em;
+	overflow: hidden;
+	background: #fff;
+}
 .focus {
+	position: relative;
+	width: 1200px;
     height: 365px;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 2em;
+    /*overflow: hidden;*/
+    
+    margin: 0 auto;
+    
 }
 .focus ul {
     position: absolute;
@@ -661,19 +670,21 @@ header .container {
     background: #fff;
 }
 .focus .preNext {
-    width:45px;
-    height:100px;
-    position:absolute;
-    top: 50%;
-    margin-top: -50px;
-    background:url(../images/focus-sprite.png) no-repeat 0 0;
+    /*width:45px;
+    height:100px;*/
+	position:absolute;
+	width: 100%;
+	height: 100%;
+    /*top: 50%;
+    margin-top: -50px;*/
+    background:#fff url(../images/focus-sprite.png) no-repeat 0 0;
     cursor:pointer;
 }
 .focus .pre {
-    left:0;
+    left:-100%;
 }
 .focus .next {
-    right:0;
+    right:-100%;
     background-position:right top;
 }
 /* Index card */
