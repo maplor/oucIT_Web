@@ -73,4 +73,35 @@
 			$(slid+" .btn span").stop(true,false).animate({"opacity":"0.8"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
 		}
 	};
+	
+//	$.fn.hoverDelay = function(options){
+//      var defaults = {
+//          hoverDuring: 100,
+//          outDuring: 100,
+//          hoverEvent: function(){
+//              $.noop();
+//          },
+//          outEvent: function(){
+//              $.noop();    
+//          }
+//      };
+//      var sets = $.extend(defaults,options || {});
+//      var hoverTimer, outTimer;
+//      return $(this).each(function(){
+//          $(this).hover(function(){
+//              clearTimeout(outTimer);
+//              hoverTimer = setTimeout(sets.hoverEvent, sets.hoverDuring);
+//          },function(){
+//              clearTimeout(hoverTimer);
+//              outTimer = setTimeout(sets.outEvent, sets.outDuring);
+//          });    
+//      });
+//  }      
+	// 绑定二级菜单功能
+	$("#navigation").find("li.second").hover(function () {
+		$(this).children("ul").stop(true,false).slideToggle("fast");
+	});
+//	$("#navigation").delegate("li.second", "click", function () {
+//		$(this).children("ul").slideToggle();
+//	});
 })(jQuery);

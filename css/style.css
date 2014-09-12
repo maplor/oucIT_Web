@@ -568,10 +568,17 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
 header .container {
 	padding-top: 1.5em;
 	padding-bottom: 1.25em;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 .logo {
 	float: left;
@@ -579,34 +586,67 @@ header .container {
 .nav {
 	float: right;
 }
-.nav ul {
+#navigation {
 	float: left;
 	margin-top: .5em;
 	margin-bottom: .5em;
 	padding: 0;
 }
-.nav li {
+#navigation > li {
+	position: relative;
 	float: left;
 }
 .nav li a {
+	position: relative;
 	display: block;
 	padding: .5em 1.5em;
+	font-size: 1.25em;
 	color: #666;
+	text-align: center;
 	text-decoration: none;
+}
+#navigation > li.second > a {
+	padding-right: 2em;
+	background: url(../images/sprite.png) no-repeat right 1em;
 }
 .nav li a:hover {
 	color: #5a99e0;
 }
-.nav li a.active {
+#navigation > li > a.active {
 	color: #333;
 	border-bottom: 5px solid #5a99e0;
+}
+.second-nav {
+	position: relative;
+	top: -6px;
+	left: 0;
+	z-index: 1;
+	display: none;
+	
+	margin: 0;
+	padding: 0;
+	padding-top: 8px;
+	width: 100%;
+	border-bottom: 3px solid #5a99e0;
+	background: #f2f4f5 url(../images/sprite.png) no-repeat 50% -25px;
+}
+.second-nav li {
+	border-right: 3px solid #5a99e0;
+	/*border-top: 1px dashed #999;*/
+	border-left: 3px solid #5a99e0;
+}
+.second-nav li a {
+	padding-left: 0;
+	padding-right: 0;
+	font-size: 1.125em;
 }
 /* focus CSS */
 .focus-warp {
 	width: 100%;
+	margin-top: 6.8em;
 	margin-bottom: 2em;
 	overflow: hidden;
-	background: #fff;
+	/*background: #fff;*/
 }
 .focus {
 	position: relative;
