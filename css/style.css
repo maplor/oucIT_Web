@@ -595,18 +595,19 @@ header .container {
 #navigation > li {
 	position: relative;
 	float: left;
+	margin-left: 1em;
 }
 .nav li a {
 	position: relative;
 	display: block;
-	padding: .5em 1.5em;
+	padding: .5em 1em;
 	font-size: 1.25em;
 	color: #666;
 	text-align: center;
 	text-decoration: none;
 }
 #navigation > li.second > a {
-	padding-right: 2em;
+	padding-right: 1.5em;
 	background: url(../images/sprite.png) no-repeat right 1em;
 }
 .nav li a:hover {
@@ -627,18 +628,25 @@ header .container {
 	padding: 0;
 	padding-top: 8px;
 	width: 100%;
-	border-bottom: 3px solid #5a99e0;
+	/*border-bottom: 3px solid #5a99e0;*/
 	background: #f2f4f5 url(../images/sprite.png) no-repeat 50% -25px;
 }
 .second-nav li {
-	border-right: 3px solid #5a99e0;
-	/*border-top: 1px dashed #999;*/
-	border-left: 3px solid #5a99e0;
+	/*border-right: 3px solid #5a99e0;
+	border-top: 1px dashed #999;
+	border-left: 3px solid #5a99e0;*/
 }
 .second-nav li a {
 	padding-left: 0;
 	padding-right: 0;
 	font-size: 1.125em;
+	color: #f2f4f5;
+	background: #5a99e0;
+	/*background-color: rgba(90,153,224,.9);*/
+}
+.second-nav li a:hover {
+	color: #fff;
+	/*background-color: rgba(90,153,224,1);*/
 }
 /* focus CSS */
 .focus-warp {
