@@ -617,7 +617,7 @@ header .container {
 	color: #333;
 	border-bottom: 5px solid #5a99e0;
 }
-.second-nav {
+.second > ul {
 	position: relative;
 	top: -6px;
 	left: 0;
@@ -626,27 +626,46 @@ header .container {
 	
 	margin: 0;
 	padding: 0;
-	padding-top: 8px;
+	padding-top: 6px;
 	width: 100%;
 	/*border-bottom: 3px solid #5a99e0;*/
 	background: #f2f4f5 url(../images/sprite.png) no-repeat 50% -25px;
 }
-.second-nav li {
+.second > ul li {
 	/*border-right: 3px solid #5a99e0;
 	border-top: 1px dashed #999;
 	border-left: 3px solid #5a99e0;*/
+	background-color: #5a99e0;
 }
-.second-nav li a {
+.second > ul li:hover {
+	background-color: #73a8e5;
+}
+.second > ul li a {
 	padding-left: 0;
 	padding-right: 0;
 	font-size: 1.125em;
 	color: #f2f4f5;
-	background: #5a99e0;
 	/*background-color: rgba(90,153,224,.9);*/
 }
-.second-nav li a:hover {
+.second > ul li a:hover {
 	color: #fff;
 	/*background-color: rgba(90,153,224,1);*/
+}
+.third {
+	position: relative;
+	background: url(../images/sprite.png) no-repeat right -14px;
+}
+.third > ul {
+	position: absolute;
+	left: 100%;
+	top: 0;
+	width: 100%;
+	display: none;
+	margin: 0;
+	padding: 0;
+}
+.third:hover > ul {
+	display: block;
 }
 /* focus CSS */
 .focus-warp {
