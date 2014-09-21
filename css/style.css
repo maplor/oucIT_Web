@@ -777,9 +777,16 @@ section.container h1 {
 	display: block;
 	float: left;
 	margin: 0;
+	padding-right: .5em;
+	font-size: 1.75em;
+	line-height: 1em;
+	font-weight: normal;
+	color: #999;
+	background: #f2f4f5;
 }
 section.container hr {
 	position: absolute;
+	top: 14px;
 	left: 0;
 	z-index: -1;
 	width: 100%;
@@ -792,6 +799,7 @@ section.container hr {
 .index section.container h1 {
 	width: 176px;
 	height: 58px;
+	padding-right: 0;
 	line-height: 58px;
 	text-indent: -999px;
 	background: #f2f4f5 url(../images/index-sprite.png) no-repeat top left;
@@ -851,22 +859,12 @@ section.container hr {
 	font-size: .875em;
 }
 /* List CSS */
-.list section.container h1 {
-	width: 4.5em;
-	font-size: 1.75em;
-	line-height: 1em;
-	font-weight: normal;
-	color: #999;
-	background: #f2f4f5;
-}
-.list section.container hr {
-	top:14px;
-}
 .list-control {
 	margin-top: .5em;
 	line-height: 3em;
 }
 .list-control > a {
+	margin-right: .25em;
 	padding: .5em;
 	color: #f2f4f5;
 	background: #bbb;
@@ -887,6 +885,96 @@ section.container hr {
 	text-decoration: underline;
 }
 /* Content CSS */
+.content section.container {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	background: #fff;
+}
+.content section.container h1 {
+	float: none;
+	padding-right: 0;
+	color: #666;
+	text-align: center;
+	background: none;
+}
+.content-info {
+	margin-top: .25em;
+	text-align: center;
+}
+.content-info span {
+	color: #999;
+}
+.content-info > span {
+	padding-left: .5em;
+	padding-right: .5em;
+}
+.content-con {
+	width: 92%;
+	max-width: 92%;
+	margin-top: .5em;
+	padding-left: 4%;
+	padding-right: 4%;
+}
+.content-con img {
+	max-width: 100%;
+}
+/* Structure CSS */
+.tag {
+	padding-top: 1em;
+	clear: both;
+}
+.tag nav {
+	overflow: hidden;
+}
+.tag-nav {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.tag-nav li {
+	display: block;
+	float: left;
+	margin-right: .5em;
+	padding: .5em;
+	color: #666;
+	cursor: pointer;
+	
+	border: 1px solid #bdc3c7;
+}
+.tag-nav li:hover {
+	color: #5a99e0;
+}
+.tag-nav li.active {
+	background: #fff;
+	color: #333;
+	border-bottom-color: #fff;
+}
+.tag-con {
+	display: none;
+	margin-top: -1px;
+	padding: 1em;
+	border: 1px solid #bdc3c7;
+	background: #fff;
+}
+.tag-con.active {
+	display: block;
+}
+.table-info {
+	width: 100%;
+}
+.table-info tr {
+	
+}
+.table-info th {
+	line-height: 2em;
+	text-align: left;
+	border-bottom: 2px solid #666;
+}
+.table-info td {
+	line-height: 2.5em;
+	/*text-align: center;*/
+	border-top: 1px solid #999;
+}
 /* Footer CSS */
 .footer {
 	margin-top: 2em;

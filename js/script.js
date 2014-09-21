@@ -74,6 +74,16 @@
 		}
 	};
 	
+	//绑定标签页切换功能
+	jQuery.tagSelect = function (tag) {
+		var $tag = $(tag);
+		$tag.find("ul.tag-nav").children("li").on("click", function () {
+			$(this).addClass("active").siblings().removeClass("active");
+			var index = $(this).index();
+			var ele = $tag.children("div.tag-con")[index];
+			$(ele).addClass("active").siblings("div").removeClass("active");
+		})
+	}
 //	$.fn.hoverDelay = function(options){
 //      var defaults = {
 //          hoverDuring: 100,
