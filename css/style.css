@@ -556,6 +556,7 @@ table {
 }
 
 body {
+	padding-top: 6.8em;
 	font-size: 16px;
 	line-height: 1.5em;
 	font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
@@ -664,13 +665,16 @@ header .container {
 	margin: 0;
 	padding: 0;
 }
+.third >ul li {
+	background-color: #73a8e5;
+}
 .third:hover > ul {
 	display: block;
 }
 /* focus CSS */
 .focus-warp {
 	width: 100%;
-	margin-top: 6.8em;
+	/*margin-top: 6.8em;*/
 	margin-bottom: 2em;
 	overflow: hidden;
 	/*background: #fff;*/
@@ -769,11 +773,23 @@ header .container {
 	left: 20px;
 	background-position:top right;
 }
-/* Index card */
-.index section.container h1 {
+section.container h1 {
 	display: block;
 	float: left;
 	margin: 0;
+}
+section.container hr {
+	position: absolute;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 3px;
+	margin: 0;
+	border: none;
+	background: url(../images/index-sprite.png) repeat-x bottom left;
+}
+/* Index card */
+.index section.container h1 {
 	width: 176px;
 	height: 58px;
 	line-height: 58px;
@@ -792,15 +808,7 @@ header .container {
 	color: #5a99e0;
 }
 .index section.container hr {
-	position: absolute;
 	top: 28px;
-	left: 0;
-	z-index: -1;
-	width: 100%;
-	height: 3px;
-	margin: 0;
-	border: none;
-	background: url(../images/index-sprite.png) repeat-x bottom left;
 }
 .crad-wrapper {
 	padding-top: 1em;
@@ -842,6 +850,44 @@ header .container {
 	color: #7f8c8d;
 	font-size: .875em;
 }
+/* List CSS */
+.list section.container h1 {
+	width: 4.5em;
+	font-size: 1.75em;
+	line-height: 1em;
+	font-weight: normal;
+	color: #999;
+	background: #f2f4f5;
+}
+.list section.container hr {
+	top:14px;
+}
+.list-control {
+	margin-top: .5em;
+	line-height: 3em;
+}
+.list-control > a {
+	padding: .5em;
+	color: #f2f4f5;
+	background: #bbb;
+	text-decoration: none;
+}
+.list-control > a:hover {
+	color: #fff;
+	background: #5a99e0;
+}
+.list-control > span {
+	padding: .5em;
+	color: #999;
+}
+.list-control > span span {
+	padding-left: .25em;
+	padding-right: .25em;
+	color: #5a99e0;
+	text-decoration: underline;
+}
+/* Content CSS */
+/* Footer CSS */
 .footer {
 	margin-top: 2em;
 	padding-top: 1em;
