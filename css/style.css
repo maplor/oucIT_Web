@@ -981,6 +981,49 @@ ul.list li p {
 	max-width: 100%;
 }
 /* Structure CSS */
+.structure section.container {
+	width: 80%;
+	float: right;
+}
+.page-nav {
+	width: 18%;
+	float: left;
+	background: #fff;
+}
+.page-nav h1 {
+	margin: 0;
+	padding: .5em;
+	font-size: 1.75em;
+	line-height: 1em;
+	font-weight: normal;
+	color: #999;
+}
+.page-nav hr {
+	margin: 0;
+	border-bottom: 3px solid #5a99e0;
+}
+.page-nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.page-nav li {
+	border-bottom: 1px solid #ccc;
+}
+.page-nav ul a {
+	display: block;
+	padding: .5em;
+	color: #999;
+	text-decoration: none;
+	border-left: 3px solid #fff;
+}
+.page-nav ul a:hover {
+	color: #5a99e0;
+}
+.page-nav li.active a {
+	color: #666;
+	border-left-color: #73a8e5;
+}
 .tag {
 	padding-top: 1em;
 	clear: both;
@@ -1037,6 +1080,11 @@ ul.list li p {
 	/*text-align: center;*/
 	border-top: 1px solid #999;
 }
+/* Dangtuan CSS */
+.dangtuan section.container {
+	width: 80%;
+	float: right;
+}
 /* Organization CSS */
 .organization-info {
 	padding: 1em;
@@ -1090,6 +1138,7 @@ ul.list li p {
 }
 /* Footer CSS */
 .footer {
+	clear: both;
 	margin-top: 2em;
 	padding-top: 1em;
 	padding-bottom: 1em;
