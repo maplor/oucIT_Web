@@ -859,6 +859,64 @@ section.container hr {
 	font-size: .875em;
 }
 /* List CSS */
+.list-wrapper {
+	clear: both;
+	padding-top: 1em;
+}
+ul.list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: #fff;
+}
+ul.list li {
+	position: relative;
+	/*padding-top: .25em;
+	padding-bottom: .25em;*/
+	padding: .75em .5em .75em 5em;
+	border-top: 2px solid #f2f4f5;
+}
+ul.list li:first-child {
+	border-top: none;
+}
+ul.list li .time {
+	position: absolute;
+	top: .75em;
+	left: .5em;
+	z-index: 1;
+	padding-left: .5em;
+	padding-right: .5em;
+	color: #73a8e5;
+	background: #f2f4f5;
+}
+ul.list li .time span {
+	display: block;
+	text-align: center;
+}
+ul.list li .time .day {
+	color: #5a99e0;
+	font-size: 1.125em;
+	/*font-weight: bold;*/
+}
+ul.list li a {
+	display: block;
+	text-decoration: none;
+}
+ul.list li h2 {
+	margin: 0;
+	font-size: 1.125em;
+	font-weight: normal;
+	/*line-height: 1.33333em;*/
+	color: #666;
+}
+ul.list li a:hover h2 {
+	color: #5a99e0;
+}
+ul.list li p {
+	margin-top: 0;
+	margin-bottom: 0;
+	color: #999;
+}
 .list-control {
 	margin-top: .5em;
 	line-height: 3em;
