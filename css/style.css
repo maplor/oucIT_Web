@@ -1037,6 +1037,57 @@ ul.list li p {
 	/*text-align: center;*/
 	border-top: 1px solid #999;
 }
+/* Organization CSS */
+.organization-info {
+	padding: 1em;
+	text-align: center;
+	background: #fff;
+}
+.organization-info img {
+	max-width: 100%;
+}
+.organization-link {
+	position: relative;
+	margin-top: 1em;
+	/*border: 2px solid #2980B9;
+	background: #73A8E5;*/
+}
+.organization-link > span {
+	/*position: absolute;
+	top: 0;
+	left: 0;*/
+	/*z-index: -1;*/
+	display: block;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	color: #999;
+}
+.organization-link > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	display: block;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	color: #f2f4f5;
+	background: #73a8e5;
+	text-decoration: none;
+}
+.organization-link > a:hover {
+	color: #fff;
+	background: #5a99e0;
+}
+.organization ul.list {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+/* Lab CSS */
+.lab ul.list {
+	padding-left: 1em;
+	padding-right: 1em;
+}
 /* Footer CSS */
 .footer {
 	margin-top: 2em;
