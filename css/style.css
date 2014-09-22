@@ -773,6 +773,10 @@ header .container {
 	left: 20px;
 	background-position:top right;
 }
+/* All page container CSS */
+section.container {
+	margin-bottom: 2em;
+}
 section.container h1 {
 	display: block;
 	float: left;
