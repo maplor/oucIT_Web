@@ -115,3 +115,17 @@
 //		$(this).children("ul").slideToggle();
 //	});
 })(jQuery);
+
+$(document).ready(function () {
+	var $aside = $("#aside");
+	if ($aside.length > 0) {
+		var top = $aside.offset().top;
+		$(window).scroll(function() {
+			if ($(window).scrollTop() > top) {
+				$aside.addClass("fixed");
+			} else if ( ($(window).scrollTop() < top) && ($aside.hasClass("fixed")) ) {
+				$aside.removeClass("fixed");
+			}
+		});
+	}
+})

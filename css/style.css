@@ -982,17 +982,23 @@ ul.list li p {
 }
 /* Structure CSS */
 .structure section.container {
-	width: 80%;
+	width: 60em;
 	float: right;
 }
 .page-nav {
-	width: 18%;
-	float: left;
+	position: absolute;
+	top: 0;
+	/*left: 0;*/
+	width: 13.5em;
 	background: #fff;
+}
+#aside.fixed {
+	position: fixed;
+	top: .25em;
 }
 .page-nav h1 {
 	margin: 0;
-	padding: .5em;
+	padding: .4em;
 	font-size: 1.75em;
 	line-height: 1em;
 	font-weight: normal;
@@ -1082,7 +1088,7 @@ ul.list li p {
 }
 /* Dangtuan CSS */
 .dangtuan section.container {
-	width: 80%;
+	width: 60em;
 	float: right;
 }
 /* Organization CSS */
