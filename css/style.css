@@ -556,7 +556,7 @@ table {
 }
 
 body {
-	padding-top: 6.8em;
+	padding-top: 5.8em;
 	font-size: 16px;
 	line-height: 1.5em;
 	font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
@@ -577,8 +577,8 @@ header {
 	z-index: 1;
 }
 header .container {
-	padding-top: 1.5em;
-	padding-bottom: 1.25em;
+	padding-top: 1em;
+	padding-bottom: .75em;
 	/*overflow: hidden;*/
 }
 .logo {
@@ -1105,6 +1105,43 @@ ul.list li p {
 .dangtuan section.container {
 	width: 60em;
 	float: right;
+}
+ul.blist {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: #fff;
+	overflow: hidden;
+	border: 1px solid #BDC3C7;
+}
+ul.blist li {
+	display: block;
+	float: left;
+	width: 50%;
+}
+ul.blist li a {
+	display: block;
+	text-decoration: none;
+	padding: 1em;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+ul.blist li:nth-child(2n) a {
+	border-right-color: #fff;
+}
+ul.blist li img {
+	max-width: 100%;
+}
+ul.blist li h2 {
+	margin: 0;
+	font-size: 1.125em;
+	font-weight: normal;
+	/*line-height: 1.33333em;*/
+	color: #666;
+	text-align: center;
+}
+ul.blist li a:hover h2 {
+	color: #4c87d9;
 }
 /* Organization CSS */
 .organization-info {
