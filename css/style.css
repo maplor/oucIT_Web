@@ -802,6 +802,17 @@ section.container hr {
 	border: none;
 	background: url(../images/index-sprite.png) repeat-x bottom left;
 }
+section.container .more {
+	float: right;
+	margin-top: .25em;
+	padding-left: .25em;
+	color: #666;
+	text-decoration: none;
+	background: #e9ecf0;
+}
+section.container .more:hover {
+	color: #4c87d9;
+}
 /* Index card */
 .index section.container h1 {
 	width: 176px;
@@ -812,15 +823,7 @@ section.container hr {
 	background: #e9ecf0 url(../images/index-sprite.png) no-repeat top left;
 }
 .index section.container .more {
-	float: right;
 	margin-top: 1em;
-	padding-left: .25em;
-	color: #666;
-	text-decoration: none;
-	background: #e9ecf0;
-}
-.index section.container .more:hover {
-	color: #4c87d9;
 }
 .index section.container hr {
 	top: 28px;
@@ -886,7 +889,7 @@ ul.list li {
 ul.list li:first-child {
 	border-top: none;
 }
-ul.list li .time {
+ul.list .time {
 	position: absolute;
 	top: .75em;
 	left: .5em;
@@ -896,30 +899,35 @@ ul.list li .time {
 	color: #73a8e5;
 	background: #e9ecf0;
 }
-ul.list li .time span {
+ul.list .time span {
 	display: block;
 	text-align: center;
 }
-ul.list li .time .day {
+ul.list .time .day {
 	color: #4c87d9;
 	font-size: 1.125em;
 	/*font-weight: bold;*/
 }
-ul.list li a {
+ul.list a {
+	float: left;
 	display: block;
+	color: #666;
 	text-decoration: none;
 }
-ul.list li h2 {
+ul.list a.type {
+	/* nothing */
+}
+ul.list h2 {
 	margin: 0;
 	font-size: 1.125em;
 	font-weight: normal;
 	/*line-height: 1.33333em;*/
-	color: #666;
 }
-ul.list li a:hover h2 {
+ul.list a:hover {
 	color: #4c87d9;
 }
-ul.list li p {
+ul.list p {
+	clear: both;
 	margin-top: 0;
 	margin-bottom: 0;
 	color: #999;
@@ -1122,20 +1130,22 @@ ul.blist li {
 	float: left;
 	width: 50%;
 }
-ul.blist li a {
+ul.blist a {
 	display: block;
-	text-decoration: none;
+	height: 14em;
 	padding: 1em;
+	text-decoration: none;
 	border-right: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 }
 ul.blist li:nth-child(2n) a {
 	border-right-color: #fff;
 }
-ul.blist li img {
+ul.blist img {
 	max-width: 100%;
+	max-height: 194px;
 }
-ul.blist li h2 {
+ul.blist h2 {
 	margin: 0;
 	font-size: 1.125em;
 	font-weight: normal;
@@ -1143,11 +1153,14 @@ ul.blist li h2 {
 	color: #666;
 	text-align: center;
 }
-ul.blist li a:hover h2 {
+ul.blist a:hover h2 {
 	color: #4c87d9;
 }
 ul.download li {
 	padding-left: .5em;
+}
+ul.download a {
+	float: none;
 }
 /* Organization CSS */
 .organization-info {
