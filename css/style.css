@@ -777,6 +777,9 @@ header .container {
 section.container {
 	margin-bottom: 2em;
 }
+section.container:nth-last-of-type(1) {
+	margin-bottom: 0;
+}
 section.container h1 {
 	display: block;
 	float: left;
@@ -1143,6 +1146,9 @@ ul.blist li h2 {
 ul.blist li a:hover h2 {
 	color: #4c87d9;
 }
+ul.download li {
+	padding-left: .5em;
+}
 /* Organization CSS */
 .organization-info {
 	padding: 1em;
@@ -1196,6 +1202,8 @@ ul.blist li a:hover h2 {
 }
 /* Footer CSS */
 .footer {
+	position: relative;
+	z-index: 1;
 	clear: both;
 	margin-top: 2em;
 	padding-top: 1em;
