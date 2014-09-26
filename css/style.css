@@ -1056,7 +1056,7 @@ ul.list p {
 	color: #666;
 	border-left-color: #73a8e5;
 }
-.tag {
+.tag-wrapper {
 	padding-top: 1em;
 	clear: both;
 }
@@ -1095,6 +1095,21 @@ ul.list p {
 }
 .tag-con.active {
 	display: block;
+}
+.table-wrapper {
+	clear: both;
+	padding-top: 1em;
+}
+.table-con {
+	padding: 1em;
+	background: #fff;
+	-webkit-box-shadow: 0 2px 5px #ccc;
+	-moz-box-shadow: 0 2px 5px #ccc;
+	box-shadow: 0 2px 5px #ccc;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=0,strength=1)
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=90,strength=3)
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=180,strength=5)
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);
 }
 .table-info {
 	width: 100%;
