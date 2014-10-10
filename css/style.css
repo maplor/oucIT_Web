@@ -911,14 +911,19 @@ ul.list li:first-child {
 	border-top: none;
 }
 ul.list .time {
-	position: absolute;
-	top: .75em;
-	left: .5em;
-	z-index: 1;
 	padding-left: .5em;
 	padding-right: .5em;
 	color: #73a8e5;
 	background: #e9ecf0;
+}
+ul.list div.time {
+	position: absolute;
+	top: .75em;
+	left: .5em;
+	z-index: 1;
+}
+ul.list a.time {
+	margin-right: .5em;
 }
 ul.list .time span {
 	display: block;
