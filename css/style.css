@@ -904,6 +904,7 @@ ul.list li {
 	/*padding-top: .25em;
 	padding-bottom: .25em;*/
 	padding: .75em .5em .75em 5em;
+	overflow: hidden;
 	border-top: 2px solid #e9ecf0;
 }
 ul.list li:first-child {
@@ -953,7 +954,8 @@ ul.list p {
 	color: #999;
 }
 .list-control {
-	margin-top: .5em;
+	clear: both;
+	padding-top: .5em;
 	line-height: 3em;
 }
 .list-control > a {
@@ -963,7 +965,8 @@ ul.list p {
 	background: #bbb;
 	text-decoration: none;
 }
-.list-control > a:hover {
+.list-control > a:hover,
+.list-control > a.active {
 	color: #fff;
 	background: #4c87d9;
 }
@@ -1019,7 +1022,7 @@ ul.list p {
 	max-width: 100%;
 }
 /* Structure CSS */
-.structure section.container {
+section.right {
 	width: 60em;
 	float: right;
 }
@@ -1147,11 +1150,11 @@ ul.list p {
 	/*text-align: center;*/
 	border-top: 1px solid #999;
 }
-/* Dangtuan CSS */
-.dangtuan section.container {
-	width: 60em;
-	float: right;
+/* Teacher CSS */
+.teacher-list .list-wrapper {
+	padding-top: 0;
 }
+/* Dangtuan CSS */
 ul.blist {
 	margin: 0;
 	padding: 0;
@@ -1194,9 +1197,9 @@ ul.blist a:hover h2 {
 ul.download li {
 	padding-left: .5em;
 }
-ul.download a {
+/*ul.download a {
 	float: none;
-}
+}*/
 /* Organization CSS */
 .organization-info {
 	padding: 1em;
