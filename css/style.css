@@ -986,7 +986,8 @@ ul.list p {
 	text-decoration: underline;
 }
 /* Content CSS */
-.content section.container {
+.content section.container,
+.teacher section.container {
 	padding-top: .5em;
 	padding-bottom: .5em;
 	background: #fff;
@@ -998,7 +999,8 @@ ul.list p {
 			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=180,strength=5)
 			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);
 }
-.content section.container h1 {
+.content section.container h1,
+.teacher section.container h1 {
 	float: none;
 	padding-right: 0;
 	color: #666;
@@ -1022,9 +1024,27 @@ ul.list p {
 	margin-top: .5em;
 	padding-left: 4%;
 	padding-right: 4%;
+	overflow: hidden;
 }
 .content-con img {
 	max-width: 100%;
+}
+/* Teacher CSS */
+.teacher-pic {
+	float: right;
+	width: 20%;
+	text-align: right;
+}
+.teacher-pic img {
+	max-width: 100%;
+}
+.teacher-info {
+	float: left;
+	width: 80%;
+}
+.teacher-info p {
+	float: left;
+	width: 50%;
 }
 /* Structure CSS */
 section.right {
@@ -1173,6 +1193,9 @@ ul.blist li {
 	float: left;
 	width: 50%;
 }
+ul.slist li {
+	width: 25%;
+}
 ul.blist a {
 	display: block;
 	height: 14em;
@@ -1182,6 +1205,12 @@ ul.blist a {
 	border-bottom: 1px solid #ccc;
 }
 ul.blist li:nth-child(2n) a {
+	border-right-color: #fff;
+}
+ul.slist li:nth-child(2n) a {
+	border-right-color: #ccc;
+}
+ul.slist li:nth-child(4n) a {
 	border-right-color: #fff;
 }
 ul.blist img {
