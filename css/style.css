@@ -629,10 +629,10 @@ header .container {
 #navigation > li:hover > a em {
 	background-position-x: -10px;
 }
-li.second > a {
+.nav li.second > a {
 	padding-right: .5em;
 }
-.second > ul {
+.nav .second > ul {
 	position: absolute;
 	/*top: 0;
 	left: 0;*/
@@ -645,16 +645,16 @@ li.second > a {
 	/*border-bottom: 3px solid #4c87d9;*/
 	/*background: #e9ecf0 url(../images/sprite.png) no-repeat 50% -25px;*/
 }
-.second > ul li {
+.nav .second > ul li {
 	/*border-right: 3px solid #4c87d9;
 	border-top: 1px dashed #999;
 	border-left: 3px solid #4c87d9;*/
 	background-color: #4c87d9;
 }
-.second > ul li:hover {
+.nav .second > ul li:hover {
 	background-color: #73a8e5;
 }
-.second > ul li a {
+.nav .second > ul li a {
 	/*padding-left: 0;*/
 	padding-right: 0;
 	font-size: 1.125em;
@@ -662,18 +662,18 @@ li.second > a {
 	text-align: left;
 	/*background-color: rgba(90,153,224,.9);*/
 }
-.second > ul li a:hover {
+.nav .second > ul li a:hover {
 	color: #fff;
 	/*background-color: rgba(90,153,224,1);*/
 }
-.third {
+.nav .third {
 	position: relative;
 	/*background: url(../images/sprite.png) no-repeat right -14px;*/
 }
-li.third > a em {
+.nav li.third > a em {
 	background-position-x: -20px;
 }
-.third > ul {
+.nav .third > ul {
 	position: absolute;
 	left: 100%;
 	top: 0;
@@ -682,10 +682,10 @@ li.third > a em {
 	margin: 0;
 	padding: 0;
 }
-.third >ul li {
+.nav .third >ul li {
 	background-color: #73a8e5;
 }
-.third:hover > ul {
+.nav .third:hover > ul {
 	display: block;
 }
 /* focus CSS */
@@ -1344,4 +1344,45 @@ ul.download li {
 }
 .footer-con li a:hover {
 	color: #b4bbbf;
+}
+
+/* Manage CSS */
+.manage {
+	padding-top: 0;
+	padding-left: 256px;
+}
+.man-aside {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 256px;
+	height: 100%;
+	background: #282829;
+}
+.man-aside h1 {
+	color: #fff;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	text-align: center;
+}
+.man-nav ul {
+	padding-left: 0;
+}
+.man-nav a {
+	display: block;
+	padding: .5em 1em;
+	font-size: 1.25em;
+	color: #ccc;
+	text-decoration: none;
+}
+.man-nav a:hover {
+	color: #fff;
+	background: #333;
+}
+.man-nav li ul {
+	margin: 0;
+}
+.man-nav li ul a {
+	padding-left: 2em;
 }

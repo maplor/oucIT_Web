@@ -109,6 +109,10 @@
 //          });    
 //      });
 //  }      
+	
+})(jQuery);
+
+$(document).ready(function () {
 	// 绑定二级菜单功能
 	$("#navigation").find("li.second").hover(function () {
 		$(this).children("ul").stop(true,false).slideToggle("fast");
@@ -116,9 +120,8 @@
 //	$("#navigation").delegate("li.second", "click", function () {
 //		$(this).children("ul").slideToggle();
 //	});
-})(jQuery);
 
-$(document).ready(function () {
+	//绑定侧边栏
 	var $aside = $("#aside");
 	if ($aside.length > 0) {
 		var top = $aside.offset().top;
