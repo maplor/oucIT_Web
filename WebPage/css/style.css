@@ -1383,15 +1383,17 @@ ul.download li {
 .man-nav ul {
 	padding-left: 0;
 }
+.man-nav li {
+	border-left: 5px solid #282829;
+}
 .man-nav a {
 	display: block;
 	padding: .5em 1em;
 	font-size: 1.25em;
 	color: #ccc;
 	text-decoration: none;
-	border-left: 5px solid #282829;
 }
-.man-nav a.active {
+.man-nav li.active {
 	border-left-color: #4c87d9;
 	background: #333;
 }
@@ -1400,8 +1402,19 @@ ul.download li {
 	background: #333;
 }
 .man-nav li ul {
+	display: none;
 	margin: 0;
 }
 .man-nav li ul a {
 	padding-left: 2em;
+}
+.man-nav a em {
+	margin-left: .5em;
+	padding-left: 5px;
+	padding-right: 5px;
+	background: url(../images/sprite.png) no-repeat;
+	background-position: 0 .5em;
+}
+.man-nav a:hover em {
+	background-position-x: -10px;
 }

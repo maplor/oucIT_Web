@@ -121,6 +121,13 @@
 //      });
 //  }      
 	
+	jQuery.manNav = function (nav) {
+		var $manNav = $(nav);
+		$manNav.children(".second").children("a").on("click", function () {
+			$(this).next("ul").slideToggle();
+			return false;
+		})
+	}
 })(jQuery);
 
 $(document).ready(function () {
@@ -144,4 +151,5 @@ $(document).ready(function () {
 			}
 		});
 	}
+	
 })
