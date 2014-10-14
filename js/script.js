@@ -2,9 +2,20 @@
 (function() {
 	jQuery.focus = function(slid) {
 		var sWidth = $(slid).width(); //获取焦点图的宽度（显示面积）
-		var len = $(slid).find("ul li").length; //获取焦点图个数
+		var $li = $(slid).find("ul li");
+		var len = $li.length; //获取焦点图个数
 		var index = 0;
 		var picTimer;
+		
+		//滚动图片作居中处理
+		var showW = $li.width();
+		var showH = $li.height();
+		$li.find("img").each(function (i, e) {
+			$(this).css({
+				"margin-left": -Math.abs(showW - $(this).width())/2,
+				"margin-top": -Math.abs(showH - $(this).height())/2
+			})
+		})
 		
 		//以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
 		//var btn = "<div class='btnBg'></div><div class='btn'>";  //带半透明条

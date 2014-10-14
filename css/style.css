@@ -641,7 +641,7 @@ header .container {
 	
 	margin: 0;
 	padding: 0;
-	width: 10em;
+	width: 9em;
 	/*border-bottom: 3px solid #4c87d9;*/
 	/*background: #e9ecf0 url(../images/sprite.png) no-repeat 50% -25px;*/
 }
@@ -677,6 +677,7 @@ header .container {
 	position: absolute;
 	left: 100%;
 	top: 0;
+	width: 12em;
 	min-width: 100%;
 	display: none;
 	margin: 0;
@@ -727,6 +728,8 @@ header .container {
 }
 .focus ul li img {
     /*position: absolute;*/
+   min-width: 100%;
+   min-height: 100%;
 }
 .focus ul li div {
     position: absolute;
@@ -857,6 +860,7 @@ section.container .more:hover {
 	width: 17em;
 	height: 18em;
 	margin-left: 1em;
+	margin-bottom: 1em;
 	padding: .5em;
 	background: #fff;
 	-webkit-box-shadow: 0 2px 5px #ccc;
@@ -871,11 +875,20 @@ section.container .more:hover {
 	margin: 0;
 	font-size: 1.125em;
 }
-.card img {
+.card .card-img {
+	width: 100%;
+	max-height: 7em;
+	overflow: hidden;
+}
+.card .card-img img {
 	max-width: 100%;
+	max-height: 100%;
 }
 .card p {
+	margin-top: .5em;
 	margin-bottom: 0;
+	word-break: break-word;
+	word-wrap: normal;
 }
 .card a {
 	display: block;
@@ -903,7 +916,7 @@ ul.list li {
 	position: relative;
 	/*padding-top: .25em;
 	padding-bottom: .25em;*/
-	padding: .75em .5em .75em 5em;
+	padding: .75em .5em .75em 6em;
 	overflow: hidden;
 	border-top: 2px solid #e9ecf0;
 }
@@ -919,7 +932,7 @@ ul.list .time {
 ul.list div.time {
 	position: absolute;
 	top: .75em;
-	left: .5em;
+	left: .75em;
 	z-index: 1;
 }
 ul.list a.time {
@@ -1359,6 +1372,7 @@ ul.download li {
 	width: 256px;
 	height: 100%;
 	background: #282829;
+	overflow-y: auto;
 }
 .man-aside h1 {
 	color: #fff;
@@ -1375,6 +1389,11 @@ ul.download li {
 	font-size: 1.25em;
 	color: #ccc;
 	text-decoration: none;
+	border-left: 5px solid #282829;
+}
+.man-nav a.active {
+	border-left-color: #4c87d9;
+	background: #333;
 }
 .man-nav a:hover {
 	color: #fff;
