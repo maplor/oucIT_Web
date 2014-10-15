@@ -1305,7 +1305,6 @@ ul.download li {
 	clear: both;
 	margin-top: 2em;
 	padding-top: 1em;
-	padding-bottom: 1em;
 	background: #282829;
 }
 .footer .container {
@@ -1357,6 +1356,37 @@ ul.download li {
 }
 .footer-con li a:hover {
 	color: #b4bbbf;
+}
+.copyright {
+	height: 2.375em;
+	margin-top: .5em;
+	background: #111;
+	overflow: hidden;
+}
+.copyright p {
+	margin: 0;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	color: #666;
+	font-size: .875em;
+	text-align: center;
+}
+.copyright a {
+	color: #2980B9;
+	text-decoration: none;
+	letter-spacing: 3px;
+}
+.copyright a:hover {
+	text-decoration: underline;
+}
+.copyright-info {
+	-webkit-transition: margin-top .2s ease 0;
+	-moz-transition: margin-top .2s ease 0;
+	-o-transition: margin-top .2s ease 0;
+	transition: margin-top .2s ease 0;
+}
+.copyright:hover .copyright-info {
+	margin-top: -38px;
 }
 
 /* Manage CSS */
