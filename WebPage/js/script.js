@@ -153,3 +153,9 @@ $(document).ready(function () {
 	}
 	
 })
+
+function indexLoad () {
+	window.onload = function () {
+		$("#load").fadeOut("400");
+	}
+}
