@@ -139,9 +139,10 @@ $(document).ready(function () {
 //		$(this).children("ul").slideToggle();
 //	});
 
-	//绑定侧边栏
+	//绑定侧边栏功能
 	var $aside = $("#aside");
 	if ($aside.length > 0) {
+		//侧边栏固定位置
 		var top = $aside.offset().top;
 		$(window).scroll(function() {
 			if ($(window).scrollTop() > top) {
@@ -150,12 +151,33 @@ $(document).ready(function () {
 				$aside.removeClass("fixed");
 			}
 		});
+		
+		//显示所在位置
+		var urlRequest = document.location.href
+		if (urlRequest) {
+			$aside.find("a").each(function (i, e) {
+				if ($(this).attr("href").split("?")[1] == decodeURI(urlRequest).substr(1).sub) {
+					$(this).parent().addClass("active");
+				}
+			})
+		}
+		
 	}
 	
 })
 
 function indexLoad () {
-	window.onload = function () {
-		$("#load").fadeOut("400");
+	if ($("#load").length > 0) {
+		var t = 0;
+		var timer = setInterval("t++", 1000);
+		window.onload = function () {
+			if (t > 2) {
+				$("#load").fadeOut("400");
+			} else {
+				setTimeout(function () {
+					$("#load").fadeOut("400");
+				}, 1000);
+			}
+		}
 	}
 }
