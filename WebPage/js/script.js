@@ -153,17 +153,15 @@ $(document).ready(function () {
 		});
 		
 		//显示所在位置
-		var urlRequest = document.location.href
+		var urlRequest = document.location.search;
 		if (urlRequest) {
 			$aside.find("a").each(function (i, e) {
-				if ($(this).attr("href").split("?")[1] == decodeURI(urlRequest).substr(1).sub) {
+				if ($(this).attr("href").split("?")[1] == decodeURI(urlRequest).substr(1)) {
 					$(this).parent().addClass("active");
 				}
 			})
 		}
-		
 	}
-	
 })
 
 function indexLoad () {
@@ -173,10 +171,12 @@ function indexLoad () {
 		window.onload = function () {
 			if (t > 2) {
 				$("#load").fadeOut("400");
+				clearInterval(timer);
 			} else {
 				setTimeout(function () {
 					$("#load").fadeOut("400");
 				}, 1000);
+				clearInterval(timer);
 			}
 		}
 	}
