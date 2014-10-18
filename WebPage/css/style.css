@@ -1138,12 +1138,12 @@ ul.list p {
 section.right {
 	width: 60em;
 	float: right;
-	min-height: 300px;
 }
 .page-nav {
-	position: absolute;
+	/*position: absolute;
 	top: 0;
-	/*left: 0;*/
+	left: 0;*/
+	float: left;
 	width: 13.5em;
 	background: #fff;
 	-webkit-box-shadow: 0 2px 5px #ccc;
