@@ -85,18 +85,6 @@
 		}
 	};
 	
-	//绑定标签页切换功能
-	jQuery.tagSelect = function (tag) {
-		var $tag = $(tag);
-		$tag.each(function (i,e) {
-			$(e).find("ul.tag-nav").children("li").on("click", function () {
-				$(this).addClass("active").siblings().removeClass("active");
-				var index = $(this).index();
-				var ele = $(e).children("div.tag-con")[index];
-				$(ele).addClass("active").siblings("div").removeClass("active");
-			})
-		})
-	}
 //	$.fn.hoverDelay = function(options){
 //      var defaults = {
 //          hoverDuring: 100,
@@ -161,6 +149,30 @@ $(document).ready(function () {
 				}
 			})
 		}
+	}
+	
+	//绑定标签页切换功能
+	var $tag = $(".tag");
+	if($tag.length > 0) {
+		$tag.each(function (i,e) {
+			$(e).find("ul.tag-nav").children("li").on("click", function () {
+				$(this).addClass("active").siblings().removeClass("active");
+				var index = $(this).index();
+				var ele = $(e).children("div.tag-con")[index];
+				$(ele).addClass("active").siblings("div").removeClass("active");
+			})
+		})
+	}
+	
+	//绑定折叠列表功能
+	var $flodList = $(".flod-list");
+	if ($flodList.length > 0) {
+		$flodList.each(function (i,e) {
+			$(e).find("h2").on("click", function () {
+				$(this).toggleClass("active").next().slideToggle(400);
+			})
+		})
+		
 	}
 })
 
