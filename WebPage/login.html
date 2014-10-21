@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<title>信息科学与工程学院</title>
-	<link href="../css/style.css" rel="stylesheet" />
+	<link href="../css/manage.css" rel="stylesheet" />
     <!-- enable HTML5 elements in IE -->
     <!--[if lt IE 9]>
     <link rel="stylesheet" type="text/css" href="../css/ie.css" />
@@ -14,6 +14,16 @@
 
 <body>
 	<div class="login">
+		<!--[if lt IE 9]>
+	    <div class="ie-login">
+	    	请使用以下任意一项浏览器登录！
+	    	<ul>
+	    		<li>IE9+ 浏览器</li>
+	    		<li>谷歌，火狐等现代浏览器</li>
+	    		<li>混合浏览器（360，搜狗，猎豹...）<br />的极速模式</li>
+	    	</ul>
+	    </div>
+	    <![endif]-->
 		<h1>信息科学与工程学院管理登陆</h1>
 		<form>
 			<p><input type="text" value="" placeholder="请输入用户名" /></p>
@@ -57,17 +67,20 @@
 			loop++;
 			if (loop > 100) {
 				//清空背景
-				ctx.fillStyle = "rgba(245, 249, 250, .5)";
+//				ctx.fillStyle = "rgba(245, 249, 250, .5)";
+				ctx.fillStyle = "rgba(0, 0, 0, .5)";
 				ctx.fillRect(0, 0, bg.width, bg.height);
 				loop = 0;
 			} else {
 				//Black BG for the canvas
 				//translucent BG to show trail
-				ctx.fillStyle = "rgba(245, 249, 250, .12)"; //字符消失速度
+//				ctx.fillStyle = "rgba(245, 249, 250, .12)"; //字符消失速度
+				ctx.fillStyle = "rgba(0, 0, 0, .12)";
 				ctx.fillRect(0, 0, bg.width, bg.height);
 			}
 			
-			ctx.fillStyle = "#9ba0a3"; //green text
+//			ctx.fillStyle = "#9ba0a3"; //green text
+			ctx.fillStyle = "#2ECC71";
 			ctx.font = font_size + "px arial";
 			//looping over drops
 			var dropsL = drops.length
