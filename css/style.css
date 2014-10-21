@@ -618,10 +618,10 @@ body {
 	height: 272px;
 	background: url(../Display/images/loader.png) no-repeat;
 	
-	-webkit-animation: loader 2s linear 0 infinite;
-	-moz-animation: loader 2s linear 0 infinite;
-	-ms-animation: loader 2s linear 0 infinite;
-	animation: loader 2s linear 0 infinite;
+	-webkit-animation: loader 2s linear 0s infinite;
+	-moz-animation: loader 2s linear 0s infinite;
+	-ms-animation: loader 2s linear 0s infinite;
+	animation: loader 2s linear 0s infinite;
 }
 @-webkit-keyframes loader{
 	from{-webkit-transform: rotate(0deg);}
@@ -703,7 +703,7 @@ header .container {
 	background-position: 0 .5em;
 }
 #navigation > li:hover > a em {
-	background-position-x: -10px;
+	background-position: -10px .5em;
 }
 .nav li.second > a {
 	padding-right: .5em;
@@ -747,7 +747,7 @@ header .container {
 	/*background: url(../images/sprite.png) no-repeat right -14px;*/
 }
 .nav li.third > a em {
-	background-position-x: -20px;
+	background-position: -20px .5em;
 }
 .nav .third > ul {
 	position: absolute;
@@ -869,6 +869,7 @@ header .container {
 	left: 20px;
 	background-position:top right;
 }
+/*==================== 可重用组件 ====================*/
 /* All page container CSS */
 section.container {
 	margin-bottom: 2em;
@@ -909,75 +910,7 @@ section.container .more {
 section.container .more:hover {
 	color: #4c87d9;
 }
-/* Index card */
-.index section.container h1 {
-	width: 176px;
-	height: 58px;
-	padding-right: 0;
-	line-height: 58px;
-	text-indent: -999px;
-	background: #e9ecf0 url(../Display/images/index-sprite.png) no-repeat top left;
-}
-.index section.container .more {
-	margin-top: 1em;
-}
-.index section.container hr {
-	top: 28px;
-}
-.crad-wrapper {
-	padding-top: 1em;
-	margin-left: -1em;
-	clear: both;
-	/*overflow: hidden;*/
-}
-.card {
-	position: relative;
-	float: left;
-	width: 17em;
-	height: 18em;
-	margin-left: 1em;
-	margin-bottom: 1em;
-	padding: .5em;
-	background: #fff;
-	-webkit-box-shadow: 0 2px 5px #ccc;
-	-moz-box-shadow: 0 2px 5px #ccc;
-	box-shadow: 0 2px 5px #ccc;
-	filter: progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=0,strength=1)
-			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=90,strength=3)
-			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=180,strength=5)
-			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);
-}
-.card h2 {
-	margin: 0;
-	font-size: 1.125em;
-}
-.card .card-img {
-	width: 100%;
-	max-height: 7em;
-	overflow: hidden;
-}
-.card .card-img img {
-	max-width: 100%;
-	max-height: 100%;
-}
-.card p {
-	margin-top: .5em;
-	margin-bottom: 0;
-	word-break: break-word;
-	word-wrap: normal;
-}
-.card a {
-	display: block;
-	color: #2980b9;
-	text-decoration: none;
-}
-.card .time {
-	position: absolute;
-	bottom: .5em;
-	color: #7f8c8d;
-	font-size: .875em;
-}
-/* List CSS */
+/*==================== 普通 List CSS ====================*/
 .list-wrapper {
 	clear: both;
 	padding-top: 1em;
@@ -1047,6 +980,7 @@ ul.list p {
 	margin-bottom: 0;
 	color: #999;
 }
+/*==================== 分页控制 ====================*/
 .list-control {
 	clear: both;
 	padding-top: .5em;
@@ -1073,6 +1007,298 @@ ul.list p {
 	padding-right: .25em;
 	color: #4c87d9;
 	text-decoration: underline;
+}
+
+/*==================== 带侧边栏的页面 CSS ====================*/
+section.right {
+	width: 60em;
+	float: right;
+}
+.page-nav {
+	/*position: absolute;
+	top: 0;
+	left: 0;*/
+	float: left;
+	width: 13.5em;
+	background: #fff;
+	-webkit-box-shadow: 0 2px 5px #ccc;
+	-moz-box-shadow: 0 2px 5px #ccc;
+	box-shadow: 0 2px 5px #ccc;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=0,strength=1)
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=90,strength=3)
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=180,strength=5)
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);
+}
+#aside.fixed {
+	position: fixed;
+	top: .25em;
+}
+.page-nav h1 {
+	margin: 0;
+	padding: .4em;
+	font-size: 1.75em;
+	line-height: 1em;
+	font-weight: normal;
+	color: #999;
+}
+.page-nav hr {
+	margin: 0;
+	border: none;
+	border-bottom: 3px solid #4c87d9;
+}
+.page-nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.page-nav li {
+	border-bottom: 1px solid #ccc;
+}
+.page-nav ul a {
+	display: block;
+	padding: .5em;
+	color: #999;
+	text-decoration: none;
+	border-left: 3px solid #fff;
+}
+.page-nav ul a:hover {
+	color: #4c87d9;
+}
+.page-nav li.active a {
+	color: #666;
+	border-left-color: #73a8e5;
+}
+/*==================== 标签页 CSS ====================*/
+.tag-wrapper {
+	padding-top: 1em;
+	clear: both;
+}
+.tag nav {
+	overflow: hidden;
+}
+.tag-nav {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.tag-nav li {
+	display: block;
+	float: left;
+	margin-right: .5em;
+	padding: .5em;
+	color: #666;
+	cursor: pointer;
+	
+	border: 1px solid #bdc3c7;
+}
+.tag-nav li:hover {
+	color: #4c87d9;
+}
+.tag-nav li.active {
+	background: #fff;
+	color: #333;
+	border-bottom-color: #fff;
+}
+.tag-con {
+	display: none;
+	margin-top: -1px;
+	padding: 1em;
+	border: 1px solid #bdc3c7;
+	background: #fff;
+}
+.tag-con.active {
+	display: block;
+}
+/*==================== 表格 CSS ====================*/
+.table-wrapper {
+	clear: both;
+	padding-top: 1em;
+}
+.table-con {
+	padding: 1em;
+	background: #fff;
+	-webkit-box-shadow: 0 2px 5px #ccc;
+	-moz-box-shadow: 0 2px 5px #ccc;
+	box-shadow: 0 2px 5px #ccc;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=0,strength=1)
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=90,strength=3)
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=180,strength=5)
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);
+}
+.table-info {
+	width: 100%;
+}
+.table-info tr {
+	
+}
+.table-info th {
+	line-height: 2em;
+	text-align: left;
+	border-bottom: 2px solid #666;
+}
+.table-info td {
+	line-height: 2.5em;
+	/*text-align: center;*/
+	border-top: 1px solid #999;
+}
+.table-info a {
+	color: #4c87d9;
+	text-decoration: none;
+}
+.table-info a:hover {
+	text-decoration: underline;
+}
+
+/*==================== 大图片列表 CSS ====================*/
+ul.blist {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: #fff;
+	overflow: hidden;
+	border: 1px solid #BDC3C7;
+}
+ul.blist li {
+	display: block;
+	float: left;
+	width: 50%;
+}
+ul.slist li {
+	width: 25%;
+}
+ul.blist a {
+	display: block;
+	height: 14em;
+	padding: 1em;
+	text-align: center;
+	text-decoration: none;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+ul.blist li:nth-child(2n) a {
+	border-right-color: #fff;
+}
+ul.slist li:nth-child(2n) a {
+	border-right-color: #ccc;
+}
+ul.slist li:nth-child(4n) a {
+	border-right-color: #fff;
+}
+ul.blist img {
+	max-width: 100%;
+	max-height: 194px;
+}
+ul.blist h2 {
+	margin: 0;
+	font-size: 1.125em;
+	font-weight: normal;
+	/*line-height: 1.33333em;*/
+	color: #666;
+	text-align: center;
+}
+ul.blist a:hover h2 {
+	color: #4c87d9;
+}
+/* 取消列表项左侧蓝色标记框 */
+ul.download li {
+	padding-left: .5em;
+}
+/*ul.download a {
+	float: none;
+}*/
+/*==================== 折叠列表 CSS ====================*/
+ul.flod-list {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+}
+ul.flod-list li {
+	padding: .5em 0;
+	border-bottom: 1px dashed #ccc;
+}
+ul.flod-list h2 {
+	margin: 0;
+	padding-right: 60px;
+	font-size: 1.125em;
+	color: #333;
+	cursor: pointer;
+	
+}
+ul.flod-list h2:hover {
+	color: #4c87d9;
+}
+.flod-list-con {
+	display: none;
+}
+/*==================== 各页面不重用 CSS ====================*/
+/* Index card */
+.index section.container h1 {
+	width: 176px;
+	height: 58px;
+	padding-right: 0;
+	line-height: 58px;
+	text-indent: -999px;
+	background: #e9ecf0 url(../Display/images/index-sprite.png) no-repeat top left;
+}
+.index section.container .more {
+	margin-top: 1em;
+}
+.index section.container hr {
+	top: 28px;
+}
+.crad-wrapper {
+	padding-top: 1em;
+	margin-left: -1em;
+	clear: both;
+	/*overflow: hidden;*/
+}
+.card {
+	position: relative;
+	float: left;
+	width: 17em;
+	height: 18em;
+	margin-left: 1em;
+	margin-bottom: 1em;
+	padding: .5em;
+	background: #fff;
+	-webkit-box-shadow: 0 2px 5px #ccc;
+	-moz-box-shadow: 0 2px 5px #ccc;
+	box-shadow: 0 2px 5px #ccc;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=0,strength=1)
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=90,strength=3)
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=180,strength=5)
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);
+}
+.card h2 {
+	margin: 0;
+	font-size: 1.125em;
+}
+.card .card-img {
+	width: 100%;
+	max-height: 7em;
+	overflow: hidden;
+}
+.card .card-img img {
+	max-width: 100%;
+	max-height: 100%;
+}
+.card p {
+	margin-top: .5em;
+	margin-bottom: 0;
+	word-break: break-word;
+	word-wrap: normal;
+}
+.card a {
+	display: block;
+	color: #2980b9;
+	text-decoration: none;
+}
+.card .time {
+	position: absolute;
+	bottom: .5em;
+	color: #7f8c8d;
+	font-size: .875em;
 }
 /* Content CSS */
 .content section.container,
@@ -1135,236 +1361,8 @@ ul.list p {
 	float: left;
 	width: 50%;
 }
-/* Structure CSS */
-section.right {
-	width: 60em;
-	float: right;
-}
-.page-nav {
-	/*position: absolute;
-	top: 0;
-	left: 0;*/
-	float: left;
-	width: 13.5em;
-	background: #fff;
-	-webkit-box-shadow: 0 2px 5px #ccc;
-	-moz-box-shadow: 0 2px 5px #ccc;
-	box-shadow: 0 2px 5px #ccc;
-	filter: progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=0,strength=1)
-			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=90,strength=3)
-			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=180,strength=5)
-			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);
-}
-#aside.fixed {
-	position: fixed;
-	top: .25em;
-}
-.page-nav h1 {
-	margin: 0;
-	padding: .4em;
-	font-size: 1.75em;
-	line-height: 1em;
-	font-weight: normal;
-	color: #999;
-}
-.page-nav hr {
-	margin: 0;
-	border: none;
-	border-bottom: 3px solid #4c87d9;
-}
-.page-nav ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-.page-nav li {
-	border-bottom: 1px solid #ccc;
-}
-.page-nav ul a {
-	display: block;
-	padding: .5em;
-	color: #999;
-	text-decoration: none;
-	border-left: 3px solid #fff;
-}
-.page-nav ul a:hover {
-	color: #4c87d9;
-}
-.page-nav li.active a {
-	color: #666;
-	border-left-color: #73a8e5;
-}
-.tag-wrapper {
-	padding-top: 1em;
-	clear: both;
-}
-.tag nav {
-	overflow: hidden;
-}
-.tag-nav {
-	float: left;
-	margin: 0;
-	padding: 0;
-}
-.tag-nav li {
-	display: block;
-	float: left;
-	margin-right: .5em;
-	padding: .5em;
-	color: #666;
-	cursor: pointer;
-	
-	border: 1px solid #bdc3c7;
-}
-.tag-nav li:hover {
-	color: #4c87d9;
-}
-.tag-nav li.active {
-	background: #fff;
-	color: #333;
-	border-bottom-color: #fff;
-}
-.tag-con {
-	display: none;
-	margin-top: -1px;
-	padding: 1em;
-	border: 1px solid #bdc3c7;
-	background: #fff;
-}
-.tag-con.active {
-	display: block;
-}
-.table-wrapper {
-	clear: both;
-	padding-top: 1em;
-}
-.table-con {
-	padding: 1em;
-	background: #fff;
-	-webkit-box-shadow: 0 2px 5px #ccc;
-	-moz-box-shadow: 0 2px 5px #ccc;
-	box-shadow: 0 2px 5px #ccc;
-	filter: progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=0,strength=1)
-			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=90,strength=3)
-			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=180,strength=5)
-			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);
-}
-.table-info {
-	width: 100%;
-}
-.table-info tr {
-	
-}
-.table-info th {
-	line-height: 2em;
-	text-align: left;
-	border-bottom: 2px solid #666;
-}
-.table-info td {
-	line-height: 2.5em;
-	/*text-align: center;*/
-	border-top: 1px solid #999;
-}
-.table-info a {
-	color: #4c87d9;
-	text-decoration: none;
-}
-.table-info a:hover {
-	text-decoration: underline;
-}
-/* Teacher CSS */
 .teacher-list .list-wrapper {
 	padding-top: 0;
-}
-/* Dangtuan CSS */
-ul.blist {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	background: #fff;
-	overflow: hidden;
-	border: 1px solid #BDC3C7;
-}
-ul.blist li {
-	display: block;
-	float: left;
-	width: 50%;
-}
-ul.slist li {
-	width: 25%;
-}
-ul.blist a {
-	display: block;
-	height: 14em;
-	padding: 1em;
-	text-align: center;
-	text-decoration: none;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-}
-ul.blist li:nth-child(2n) a {
-	border-right-color: #fff;
-}
-ul.slist li:nth-child(2n) a {
-	border-right-color: #ccc;
-}
-ul.slist li:nth-child(4n) a {
-	border-right-color: #fff;
-}
-ul.blist img {
-	max-width: 100%;
-	max-height: 194px;
-}
-ul.blist h2 {
-	margin: 0;
-	font-size: 1.125em;
-	font-weight: normal;
-	/*line-height: 1.33333em;*/
-	color: #666;
-	text-align: center;
-}
-ul.blist a:hover h2 {
-	color: #4c87d9;
-}
-ul.download li {
-	padding-left: .5em;
-}
-/*ul.download a {
-	float: none;
-}*/
-ul.flod-list {
-	margin-top: 0;
-	margin-bottom: 0;
-	padding-left: 0;
-	list-style: none;
-}
-ul.flod-list li {
-	padding: .5em 0;
-	border-bottom: 1px dashed #ccc;
-}
-ul.flod-list h2 {
-	margin: 0;
-	padding-right: 60px;
-	font-size: 1.125em;
-	color: #333;
-	cursor: pointer;
-	
-}
-ul.flod-list h2:hover {
-	color: #4c87d9;
-}
-.flod-list-con {
-	display: none;
-}
-.txt-line {
-	overflow: hidden;
-}
-.txt-line div {
-	float: left;
-	line-height: 2em;
-}
-.txt-line .title {
-	font-weight: bold;
 }
 /* Organization CSS */
 .organization-info {
@@ -1417,7 +1415,18 @@ ul.flod-list h2:hover {
 	padding-left: 1em;
 	padding-right: 1em;
 }
-/* Footer CSS */
+/* 课程列表单行数据 */
+.txt-line {
+	overflow: hidden;
+}
+.txt-line div {
+	float: left;
+	line-height: 2em;
+}
+.txt-line .title {
+	font-weight: bold;
+}
+/*==================== Footer CSS ====================*/
 .footer {
 	position: relative;
 	z-index: 1;

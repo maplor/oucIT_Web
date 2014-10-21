@@ -573,15 +573,17 @@ div.login {
 	margin-left: -20%;
 	text-align: center;
 	background: #fff;
-	background: rgba(255,255,255,.45);
-	-webkit-box-shadow: 0 1px 3px 1px #ccc;
+	/*background: rgba(255,255,255,.45);*/
+	background: rgba(51,51,51,.51);
+	/*-webkit-box-shadow: 0 1px 3px 1px #ccc;
     -moz-box-shadow: 0 1px 3px 1px #ccc;
-	box-shadow: 0 1px 3px 1px #ccc;
+	box-shadow: 0 1px 3px 1px #ccc;*/
 	-webkit-border-radius: .5em;
 	-moz-border-radius: .5em;
 	border-radius: .5em;
 }
 .login h1 {
+	color: #ccc;
 	line-height: 1.5em;
 }
 .login form {
@@ -669,5 +671,5 @@ div.login {
 	background-position: 0 .5em;
 }
 .man-nav a:hover em {
-	background-position-x: -10px;
+	background-position: -10px .5em;
 }

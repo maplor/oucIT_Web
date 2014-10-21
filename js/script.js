@@ -179,7 +179,9 @@ $(document).ready(function () {
 function indexLoad () {
 	if ($("#load").length > 0) {
 		var t = 0;
-		var timer = setInterval("t++", 1000);
+		var timer = setInterval(function () {
+			t++;
+		}, 1000);
 		window.onload = function () {
 			if (t > 2) {
 				$("#load").fadeOut("400");
