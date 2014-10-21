@@ -807,9 +807,21 @@ header .container {
    min-width: 100%;
    min-height: 100%;
 }
-.focus ul li div {
+.focus ul li h2 {
     position: absolute;
-    overflow: hidden;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2em;
+    margin: 0;
+    padding: 0 .5em;
+    color: #fff;
+    background: #333;
+    background: rgba(0,0,0,.8);
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 2em;
 }
 /*.focus .btnBg {position:absolute; width:800px; height:20px; left:0; bottom:0; background:#000; display:none;}*/
 .focus .btn {
@@ -1024,10 +1036,10 @@ section.right {
 	-webkit-box-shadow: 0 2px 5px #ccc;
 	-moz-box-shadow: 0 2px 5px #ccc;
 	box-shadow: 0 2px 5px #ccc;
-	filter: progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=0,strength=1)
+	/*filter: progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=0,strength=1)
 			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=90,strength=3)
 			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=180,strength=5)
-			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);*/
 }
 #aside.fixed {
 	position: fixed;
@@ -1120,10 +1132,10 @@ section.right {
 	-webkit-box-shadow: 0 2px 5px #ccc;
 	-moz-box-shadow: 0 2px 5px #ccc;
 	box-shadow: 0 2px 5px #ccc;
-	filter: progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=0,strength=1)
+	/*filter: progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=0,strength=1)
 			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=90,strength=3)
 			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=180,strength=5)
-			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);*/
 }
 .table-info {
 	width: 100%;
@@ -1265,10 +1277,10 @@ ul.flod-list h2:hover {
 	-webkit-box-shadow: 0 2px 5px #ccc;
 	-moz-box-shadow: 0 2px 5px #ccc;
 	box-shadow: 0 2px 5px #ccc;
-	filter: progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=0,strength=1)
+	/*filter: progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=0,strength=1)
 			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=90,strength=3)
 			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=180,strength=5)
-			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);*/
 }
 .card h2 {
 	margin: 0;
@@ -1280,13 +1292,12 @@ ul.flod-list h2:hover {
 	overflow: hidden;
 }
 .card .card-img img {
-	max-width: 100%;
-	max-height: 100%;
+	width: 100%;
 }
 .card p {
 	margin-top: .5em;
 	margin-bottom: 0;
-	word-break: break-word;
+	word-break: break-all;
 	word-wrap: normal;
 }
 .card a {
@@ -1309,10 +1320,10 @@ ul.flod-list h2:hover {
 	-webkit-box-shadow: 0 2px 5px #ccc;
 	-moz-box-shadow: 0 2px 5px #ccc;
 	box-shadow: 0 2px 5px #ccc;
-	filter: progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=0,strength=1)
+	/*filter: progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=0,strength=1)
 			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=90,strength=3)
 			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=180,strength=5)
-			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);
+			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);*/
 }
 .content section.container h1,
 .teacher section.container h1 {

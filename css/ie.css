@@ -1,5 +1,15 @@
 @charset "utf-8";
 /* CSS Document */
+.page-nav,
+.table-con,
+.card,
+.content section.container,
+.teacher section.container {
+	border: 1px solid #d0d0d0;
+}
+.card {
+	width: 16.875em;
+}
 .ie-login {
 	position: absolute;
 	width: 100%;

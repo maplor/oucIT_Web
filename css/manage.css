@@ -573,25 +573,31 @@ div.login {
 	margin-left: -20%;
 	text-align: center;
 	background: #fff;
-	/*background: rgba(255,255,255,.45);*/
-	background: rgba(51,51,51,.51);
-	/*-webkit-box-shadow: 0 1px 3px 1px #ccc;
+	background: rgba(255,255,255,.45);
+	-webkit-box-shadow: 0 1px 3px 1px #ccc;
     -moz-box-shadow: 0 1px 3px 1px #ccc;
-	box-shadow: 0 1px 3px 1px #ccc;*/
+	box-shadow: 0 1px 3px 1px #ccc;
 	-webkit-border-radius: .5em;
 	-moz-border-radius: .5em;
 	border-radius: .5em;
 }
+div.admin {
+	background: #000;
+	background: rgba(51,51,51,.51);
+}
 .login h1 {
-	color: #ccc;
+	color: #333;
 	line-height: 1.5em;
+}
+.admin h1 {
+	color: #fff;
 }
 .login form {
 	width: 22em;
 	margin: auto;
 }
 .login p {
-	margin: 2em 0;
+	margin: 1em 0;
 }
 .login input {
 	width: 20em;
