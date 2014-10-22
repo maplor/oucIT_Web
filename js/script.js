@@ -87,9 +87,14 @@
 	jQuery.cardImg = function (card) {
 		var $card = $(card);
 		if ($card.length > 0) {
-			$card.find("div.card-img").children("img").each(function (i, e) {
-				var showH = $(this).parent().height();
-				$(this).css("margin-top", -Math.abs(showH - $(this).height())/2);
+			$card.find("div.card-img").each(function (i, e) {
+				var showH = $(this).height();
+				if (showH > 1) {
+					var imgH = $(this).children("img").height();
+					$(this).children("img").css("margin-top", -Math.abs(showH - imgH)/2);
+				} else{
+					$(this).hide();
+				}
 			})
 		}
 	}
