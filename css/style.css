@@ -1254,6 +1254,12 @@ ul.flod-list h2:hover {
 	text-indent: -999px;
 	background: #e9ecf0 url(../Display/images/index-sprite.png) no-repeat top left;
 }
+.index section.notice h1 {
+	background-position: 0 -63px;
+}
+.index section.employ h1 {
+	background-position: 0 -126px;
+}
 .index section.container .more {
 	margin-top: 1em;
 }
@@ -1270,7 +1276,7 @@ ul.flod-list h2:hover {
 	position: relative;
 	float: left;
 	width: 17em;
-	height: 18em;
+	height: 18.5em;
 	margin-left: 1em;
 	margin-bottom: 1em;
 	padding: .5em;
@@ -1286,11 +1292,19 @@ ul.flod-list h2:hover {
 .card h2 {
 	margin: 0;
 	font-size: 1.125em;
+	font-weight: normal;
+}
+.card h2 a {
+	color: #333;
+}
+.card h2 a:hover {
+	color: #2980b9;
 }
 .card .card-img {
 	width: 100%;
 	max-height: 7em;
 	overflow: hidden;
+	margin-top: .5em;
 }
 .card .card-img img {
 	width: 100%;
@@ -1300,6 +1314,7 @@ ul.flod-list h2:hover {
 	margin-bottom: 0;
 	word-break: break-all;
 	word-wrap: normal;
+	color: #666;
 }
 .card a {
 	display: block;
@@ -1309,7 +1324,8 @@ ul.flod-list h2:hover {
 .card .time {
 	position: absolute;
 	bottom: .5em;
-	color: #7f8c8d;
+	z-index: 0;
+	color: #999;
 	font-size: .875em;
 }
 /* Content CSS */
