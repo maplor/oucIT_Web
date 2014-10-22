@@ -7,6 +7,10 @@
 .teacher section.container {
 	border: 1px solid #d0d0d0;
 }
+.focus ul li {
+	*display: inline;
+	zoom: 1;
+}
 .card {
 	width: 16.875em;
 }

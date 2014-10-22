@@ -791,6 +791,7 @@ header .container {
     list-style: none;
     white-space: nowrap;
     font-size: 0;
+    -webkit-text-size-adjust: none;
 }
 .focus ul li {
     width: 100%;
@@ -804,18 +805,18 @@ header .container {
 }
 .focus ul li img {
     /*position: absolute;*/
-   min-width: 100%;
-   min-height: 100%;
+   display: block;
+   width: 100%;
 }
 .focus ul li h2 {
     position: absolute;
     left: 0;
     bottom: 0;
     display: block;
-    width: 100%;
+    width: 96%;
     height: 2em;
     margin: 0;
-    padding: 0 .5em;
+    padding: 0 2%;
     color: #fff;
     background: #333;
     background: rgba(0,0,0,.8);
@@ -1441,6 +1442,7 @@ ul.flod-list h2:hover {
 .footer {
 	position: relative;
 	z-index: 1;
+	width: 100%;
 	clear: both;
 	margin-top: 2em;
 	padding-top: 1em;
