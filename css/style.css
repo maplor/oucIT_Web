@@ -1276,7 +1276,7 @@ ul.flod-list h2:hover {
 	position: relative;
 	float: left;
 	width: 17em;
-	height: 18.5em;
+	height: 19.5em;
 	margin-left: 1em;
 	margin-bottom: 1em;
 	padding: .5em;
@@ -1291,8 +1291,10 @@ ul.flod-list h2:hover {
 }
 .card h2 {
 	margin: 0;
+	padding-bottom: .5em;
 	font-size: 1.125em;
 	font-weight: normal;
+	border-bottom: 1px solid #ccc;
 }
 .card h2 a {
 	color: #333;
