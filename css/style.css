@@ -928,6 +928,16 @@ section.container .more:hover {
 	clear: both;
 	padding-top: 1em;
 }
+.list-wrapper > h2 {
+	margin: 0;
+	padding: 0 .35em;
+	font-size: 1.375em;
+	font-weight: normal;
+	line-height: 2em;
+	border-top: .5em solid #e9ecf0;
+	border-bottom: 1px solid #ccc;
+	background: #fff;
+}
 ul.list {
 	margin: 0;
 	padding: 0;
