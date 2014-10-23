@@ -885,10 +885,10 @@ header .container {
 /*==================== 可重用组件 ====================*/
 /* All page container CSS */
 section.container {
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 section.container:nth-last-of-type(1) {
-	margin-bottom: 0;
+	margin-bottom: .5em;
 }
 section.container h1 {
 	display: block;
@@ -934,7 +934,7 @@ section.container .more:hover {
 	font-size: 1.375em;
 	font-weight: normal;
 	line-height: 2em;
-	border-top: .5em solid #e9ecf0;
+	/* border-top: .5em solid #e9ecf0; */
 	border-bottom: 1px solid #ccc;
 	background: #fff;
 }
@@ -1402,7 +1402,10 @@ ul.flod-list h2:hover {
 	width: 50%;
 }
 .teacher-list .list-wrapper {
-	padding-top: 0;
+	padding-top: .5em;
+}
+.teacher-list .list {
+	margin-bottom: 1em;
 }
 /* Organization CSS */
 .organization-info {
@@ -1466,13 +1469,48 @@ ul.flod-list h2:hover {
 .txt-line .title {
 	font-weight: bold;
 }
+/*==================== Building CSS ====================*/
+body.building {
+	padding-top: 0;
+	background: #080808;
+}
+div.building {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 400px;
+	height: 360px;
+	color: #fff;
+	text-align: center;
+}
+.building-light {
+	position: absolute;
+	top: 20px;
+	left: 190px;
+	
+	-webkit-transition: opacity .3s linear 0;
+	-moz-transition: opacity .3s linear 0;
+	-o-transition: opacity .3s linear 0;
+	transition: opacity .3s linear 0;
+}
+.building-light.dark {
+	opacity: .5;
+	filter: Alpha(opacity=50);
+}
+.building h1 {
+	margin: 0;
+	line-height: 1.5em;
+}
 /*==================== Footer CSS ====================*/
 .footer {
 	position: relative;
 	z-index: 1;
 	width: 100%;
 	clear: both;
-	margin-top: 2em;
+	margin-top: 1em;
 	padding-top: 1em;
 	background: #282829;
 }

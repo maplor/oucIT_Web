@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>信息科学与工程学院</title>
+	<link href="../css/style.css" rel="stylesheet" />
+    <!-- enable HTML5 elements in IE -->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="../css/ie.css" />
+    <![endif]-->
+</head>
+
+<body class="building">
+	<div class="building">
+		<img src="images/building-man.jpg" alt="正在建设中..." title="正在建设中..." />
+		<img class="building-light" id="light" src="images/building-light.png" />
+		<h1>正在建设中，敬请期待。</h1>
+	</div>
+	<script src="../js/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		(function () {
+			var timer = setInterval(function () {
+				$("#light").toggleClass("dark");
+			}, 400);
+		})();
+	</script>
+</body>
+</html>
