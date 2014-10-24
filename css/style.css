@@ -557,7 +557,7 @@ table {
 }
 
 body {
-	padding-top: 5.8em;
+	padding-top: 7.8em;
 	font-size: 16px;
 	line-height: 1.5em;
 	font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
@@ -654,7 +654,7 @@ header {
 }
 header .container {
 	padding-top: 1em;
-	padding-bottom: .75em;
+	/*padding-bottom: .5em;*/
 	/*overflow: hidden;*/
 }
 .logo {
@@ -764,6 +764,25 @@ header .container {
 }
 .nav .third:hover > ul {
 	display: block;
+}
+div.bate-info {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: .5em 0;
+	font-size: .875em;
+	color: #6b3612;
+	background: #ffedc7;
+}
+div.bate-info p {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 32px;
+	background: url(../WebPage/images/lb.jpg) no-repeat 5px -8px;
+}
+div.bate-info a {
+	margin-left: 1em;
+	color: #2980B9;
+	text-decoration: none;
 }
 /* focus CSS */
 .focus-warp {
@@ -1594,4 +1613,15 @@ div.building {
 }
 .copyright:hover .copyright-info {
 	margin-top: -38px;
+}
+#to-top {
+	display: none;
+	right: 1.5em;
+	bottom: 6em;
+	width: 48px;
+	height: 48px;
+	background: url(../WebPage/images/sprite.png) no-repeat 0 -15px;
+}
+#to-top:hover {
+	background-position: 0 -65px;
 }

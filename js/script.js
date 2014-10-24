@@ -191,6 +191,45 @@ $(document).ready(function () {
 		})
 		
 	}
+	
+	//绑定回到顶部功能
+	var topBtn = document.getElementById('to-top');
+	var timer = null;
+	var isTop = true;
+	//获取页面可视区高度
+	var cHeight = document.documentElement.clientHeight;
+	//滚动时触发
+	window.onscroll = function() {
+		//获得已滚动距离
+		var top = document.documentElement.scrollTop || document.body.scrollTop;
+		if (top >= cHeight) {
+			topBtn.style.display = 'block';
+		} else {
+			topBtn.style.display = 'none';
+		}
+		
+		if (!isTop) {
+			clearInterval(timer);
+		}
+		isTop = false;
+	}
+	topBtn.onclick = function() {
+		//设置定时器
+		timer = setInterval(function(){
+			//获得已滚动距离
+			var top = document.documentElement.scrollTop || document.body.scrollTop;
+			//每次滚动的距离
+			var speed = Math.floor(-top / 6);
+			document.documentElement.scrollTop = document.body.scrollTop = top + speed;
+			
+			isTop = true;
+			
+			if (top == 0) {
+				clearInterval(timer);
+			}
+		}, 30);
+		return false;
+	}
 })
 
 function indexLoad () {
