@@ -1346,6 +1346,7 @@ ul.flod-list h2:hover {
 	word-break: break-all;
 	word-wrap: normal;
 	color: #666;
+	text-indent: 2em;
 }
 .card a {
 	display: block;
@@ -1435,39 +1436,6 @@ ul.flod-list h2:hover {
 .organization-info img {
 	max-width: 100%;
 }
-.organization-link {
-	position: relative;
-	margin-top: 1em;
-	/*border: 2px solid #2980B9;
-	background: #73A8E5;*/
-}
-.organization-link > span {
-	/*position: absolute;
-	top: 0;
-	left: 0;*/
-	/*z-index: -1;*/
-	display: block;
-	padding-top: .5em;
-	padding-bottom: .5em;
-	color: #999;
-}
-.organization-link > a {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	width: 100%;
-	display: block;
-	padding-top: .5em;
-	padding-bottom: .5em;
-	color: #e9ecf0;
-	background: #73a8e5;
-	text-decoration: none;
-}
-.organization-link > a:hover {
-	color: #fff;
-	background: #4c87d9;
-}
 .organization ul.list {
 	padding-left: 1em;
 	padding-right: 1em;
@@ -1486,6 +1454,7 @@ ul.flod-list h2:hover {
 	line-height: 2em;
 }
 .txt-line .title {
+	margin-right: .5em;
 	font-weight: bold;
 }
 /*==================== Building CSS ====================*/
@@ -1501,7 +1470,7 @@ div.building {
 	left: 0;
 	margin: auto;
 	width: 400px;
-	height: 360px;
+	height: 420px;
 	color: #fff;
 	text-align: center;
 }
@@ -1624,4 +1593,22 @@ div.building {
 }
 #to-top:hover {
 	background-position: 0 -65px;
+}
+.back-link {
+	padding-top: 1em;
+}
+.back-link a {
+	display: block;
+	width: 92%;
+	margin: auto;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	color: #e9ecf0;
+	background: #73a8e5;
+	text-align: center;
+	text-decoration: none;
+}
+.back-link a:hover {
+	color: #fff;
+	background: #4c87d9;
 }
