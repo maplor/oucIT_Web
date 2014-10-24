@@ -58,10 +58,9 @@
 			//$(slid+" ul").css("width",sWidth * (len));
 	
 			//当页面宽度改变时，相应改变数据，实现响应式
-	//		$(window).resize(function(e) {
-	//			sWidth = $(slid).width();
-	//			len = $(slid).find("ul li").length;
-	//		});
+			$(window).resize(function(e) {
+				sWidth = $slid.width();
+			});
 	
 			//鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
 			$slid.hover(function() {

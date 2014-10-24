@@ -641,7 +641,7 @@ body {
 }
 .container {
 	position: relative;
-	width: 1200px;
+	width: 960px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -659,6 +659,13 @@ header .container {
 }
 .logo {
 	float: left;
+	width: 20em;
+}
+.logo a {
+	display: block;
+}
+.logo img {
+	width: 100%;
 }
 .nav {
 	float: right;
@@ -672,12 +679,12 @@ header .container {
 #navigation > li {
 	position: relative;
 	float: left;
-	margin-left: 1em;
+	margin-left: .5em;
 }
 .nav li a {
 	position: relative;
 	display: block;
-	padding: .5em 1em;
+	padding: .5em;
 	font-size: 1.25em;
 	color: #666;
 	text-align: center;
@@ -696,7 +703,7 @@ header .container {
 	background: #4c87d9 url(../images/sprite.png) no-repeat right 1em;
 }*/
 .nav li a em {
-	margin-left: .5em;
+	margin-left: .25em;
 	padding-left: 5px;
 	padding-right: 5px;
 	background: url(../Display/images/sprite.png) no-repeat;
@@ -793,13 +800,8 @@ div.bate-info a {
 	/*background: #fff;*/
 }
 .focus {
-	position: relative;
-	width: 1200px;
     height: 365px;
     /*overflow: hidden;*/
-    
-    margin: 0 auto;
-    
 }
 .focus ul {
     position: absolute;
@@ -1053,7 +1055,7 @@ ul.list p {
 
 /*==================== 带侧边栏的页面 CSS ====================*/
 section.right {
-	width: 60em;
+	width: 45em;
 	float: right;
 }
 .page-nav {
@@ -1304,8 +1306,8 @@ ul.flod-list h2:hover {
 .card {
 	position: relative;
 	float: left;
-	width: 17em;
-	height: 19.5em;
+	width: 13.25em;
+	height: 21em;
 	margin-left: 1em;
 	margin-bottom: 1em;
 	padding: .5em;
@@ -1508,7 +1510,7 @@ div.building {
 .blogo {
 	position: relative;
 	float: left;
-	width: 18em;
+	width: 14.25em;
 	text-align: center;
 }
 .blogo img {
@@ -1525,7 +1527,7 @@ div.building {
 }
 .footer-con {
 	float: left;
-	width: 18em;
+	width: 14.25em;
 	margin-left: 1em;
 }
 .footer-con h3 {
@@ -1603,12 +1605,42 @@ div.building {
 	margin: auto;
 	padding-top: .5em;
 	padding-bottom: .5em;
-	color: #e9ecf0;
-	background: #73a8e5;
+	color: #fff;
+	background: #bdc3c7;
 	text-align: center;
 	text-decoration: none;
 }
 .back-link a:hover {
-	color: #fff;
-	background: #4c87d9;
+	background: #73a8e5;
+}
+
+/*==================== 媒体查询开始 ====================*/
+@media only screen and (min-width: 1340px) {
+	.container {
+		width: 1200px;
+	}
+	.logo {
+		width: auto;
+	}
+	#navigation > li {
+		margin-left: 1em;
+	}
+	.nav li a {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	.nav li a em {
+		margin-left: .5em;
+	}
+	.card {
+		width: 17em;
+		height: 19.5em;
+	}
+	section.right {
+		width: 60em;
+	}
+	.blogo,
+	.footer-con {
+		width: 18em;
+	}
 }
