@@ -777,7 +777,7 @@ div.bate-info p {
 	margin-top: 0;
 	margin-bottom: 0;
 	padding-left: 32px;
-	background: url(../WebPage/images/lb.jpg) no-repeat 5px -8px;
+	background: url(../Display/images/lb.jpg) no-repeat 5px -8px;
 }
 div.bate-info a {
 	margin-left: 1em;
@@ -1620,7 +1620,7 @@ div.building {
 	bottom: 6em;
 	width: 48px;
 	height: 48px;
-	background: url(../WebPage/images/sprite.png) no-repeat 0 -15px;
+	background: url(../Display/images/sprite.png) no-repeat 0 -15px;
 }
 #to-top:hover {
 	background-position: 0 -65px;
