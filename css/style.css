@@ -1589,10 +1589,11 @@ div.building {
 }
 #to-top {
 	display: none;
-	right: 1.5em;
+	left: 50%;
 	bottom: 6em;
 	width: 48px;
 	height: 48px;
+	margin-left: 31em;
 	background: url(../Display/images/sprite.png) no-repeat 0 -15px;
 }
 #to-top:hover {
@@ -1619,7 +1620,7 @@ div.building {
 /*==================== 媒体查询开始 ====================*/
 @media only screen and (min-width: 1340px) {
 	.container {
-		width: 1200px;
+		width: 71em;
 	}
 	.logo {
 		width: auto;
@@ -1635,14 +1636,17 @@ div.building {
 		margin-left: .5em;
 	}
 	.card {
-		width: 17em;
-		height: 20.5em;
+		width: 16em;
+		height: 21.5em;
 	}
 	section.right {
-		width: 60em;
+		width: 56em;
 	}
 	.blogo,
 	.footer-con {
-		width: 18em;
+		width: 17em;
+	}
+	#to-top {
+		margin-left: 36em;
 	}
 }
