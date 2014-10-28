@@ -580,7 +580,7 @@ body {
 	bottom: 0;
 	left: 0;
 	margin: auto;
-	height: 25em;
+	height: 20em;
 	text-align: center;
 }
 .loading h1 {
@@ -800,7 +800,7 @@ div.bate-info a {
 	/*background: #fff;*/
 }
 .focus {
-    height: 365px;
+    height: 380px;
     /*overflow: hidden;*/
 }
 .focus ul {
@@ -1342,6 +1342,7 @@ ul.flod-list h2:hover {
 	margin-top: .5em;
 }
 .card .card-img img {
+	display: block;
 	width: 100%;
 }
 .card p {
@@ -1620,7 +1621,7 @@ div.building {
 /*==================== 媒体查询开始 ====================*/
 @media only screen and (min-width: 1340px) {
 	.container {
-		width: 71em;
+		width: 1200px;
 	}
 	.logo {
 		width: auto;
