@@ -820,6 +820,7 @@ div.bate-info a {
     overflow: hidden;
     position: relative;
     display: inline-block;
+    background: #fff;
 }
 .focus ul li a {
 	display: block;
@@ -1619,9 +1620,9 @@ div.building {
 }
 
 /*==================== 媒体查询开始 ====================*/
-@media only screen and (min-width: 1340px) {
+@media only screen and (min-width: 1280px) {
 	.container {
-		width: 1200px;
+		width: 1136px;
 	}
 	.logo {
 		width: auto;
