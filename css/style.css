@@ -813,6 +813,11 @@ div.bate-info a {
     white-space: nowrap;
     font-size: 0;
     -webkit-text-size-adjust: none;
+    
+    -webkit-transition: -webkit-transform .5s ease-in-out 0s;
+    -moz-transition: -moz-transform .5s ease-in-out 0s;
+    -o-transition: -o-transform .5s ease-in-out 0s;
+    transition: transform .5s ease-in-out 0s;
 }
 .focus ul li {
     width: 100%;
