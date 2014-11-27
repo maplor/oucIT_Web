@@ -1,7 +1,7 @@
 // JavaScript Document
 // Author: Maplor
-// Date: 2014-11-25
-// Changes(每次修改+1): 26
+// Date: 2014-11-27
+// Changes(每次修改+1): 27
 (function() {
 	$.extend({
 		focus: function(slid) {
@@ -143,12 +143,12 @@ $(document).ready(function () {
 	//首页正在加载提示
 	var $load = $("#load");
 	if ($load.length > 0) {
-		$.focus("#focus");
 		var t = 0;
 		var timer = setInterval(function () {
 			t++;
 		}, 1000);
 		window.onload = function () {
+			$.focus("#focus");
 			$.cardImg(".card");
 			if (t > 2) {
 				$load.fadeOut("400");
