@@ -1317,14 +1317,26 @@ ul.flod-list h2:hover {
 	margin-left: 1em;
 	margin-bottom: 1em;
 	padding: .5em;
+	
 	background: #fff;
-	-webkit-box-shadow: 0 2px 5px #ccc;
-	-moz-box-shadow: 0 2px 5px #ccc;
-	box-shadow: 0 2px 5px #ccc;
+	background: rgba(255,255,255,.75);
+	-webkit-box-shadow: 0 1px 3px #ccc;
+	-moz-box-shadow: 0 1px 3px #ccc;
+	box-shadow: 0 1px 3px #ccc;
 	/*filter: progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=0,strength=1)
 			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=90,strength=3)
 			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=180,strength=5)
 			progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0,direction=270,strength=3);*/
+	-webkit-transition: background .2s;
+    -moz-transition: background .2s;
+    -o-transition: background .2s;
+    transition: background .2s;
+    -webkit-border-radius: .25em;
+    -moz-border-radius: .25em;
+    border-radius: .25em;
+}
+.card:hover {
+	background: #fff;
 }
 .card h2 {
 	margin: 0;

@@ -679,3 +679,58 @@ div.admin {
 .man-nav a:hover em {
 	background-position: -10px .5em;
 }
+.man-container {
+	padding: 1em;
+}
+.man-container > span {
+	display: block;
+}
+.man-container input,
+.man-container select,
+.man-container textarea {
+	padding: .25em;
+	margin-bottom: .75em;
+	border: 1px solid #999;
+	-webkit-border-radius: .25em;
+    -moz-border-radius: .25em;
+    border-radius: .25em;
+}
+.man-container textarea {
+	min-width: 80%;
+}
+.man-container > select {
+	min-width: 20%;
+}
+.man-container > input[type="text"] {
+	width: 80%;
+}
+.man-time > input[type="text"] {
+	width: 5em;
+}
+.man-container input[type="submit"],
+.man-container input[type="button"] {
+	padding: .5em 1em;
+	min-width: 4em;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+}
+.preview {
+	padding: .5em;
+	background: #fff;
+}
+.pagelist {
+	
+}
+.man-container table {
+	background: #fff;
+}
+.man-container > img {
+	max-width: 10em;
+	max-height: 10em;
+}
