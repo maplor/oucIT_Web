@@ -103,6 +103,28 @@
 			}
 		},
 		
+		newFocus: function(slid, hasBtn, hasNum, direction, autoTime) {
+			var $slid = $(slid);
+			if ($slid.length > 0) {
+				hasBtn = hasBtn || false;//是否生成标记导航块
+				hasNum = hasNum || false;//标记导航块是否生成数字
+				direction = direction || "left";//滚动方向
+				autoTime = autoTime || 5000;//自动播放间隔时间
+				
+				var $li = $slid.find("li"),//图片块
+					num = $li.length,//图片个数
+					slidWidth = $slid.width(),//每次移动宽度
+					index = 0,//位置标识
+					dom = "",//需要插入的dom代码
+					imgTimer,//计时器
+					supportTrans = false;//硬件加速支持标识
+				
+				if (("MozTransform" in document.documentElement.style || "WebkitTransform" in document.documentElement.style || "OTransform" in document.documentElement.style || "transform" in document.documentElement.style) && ("WebkitTransition" in document.documentElement.style || "MozTransition" in document.documentElement.style || "OTransition" in document.documentElement.style || "transition" in document.documentElement.style)) {
+					supportTrans = true;//支持CSS3 transform 和 transition 则为true
+				}
+			}
+		},
+		
 		cardImg: function (card) {
 			var $card = $(card);
 			if ($card.length > 0) {
@@ -137,30 +159,35 @@
 			})
 		}
 	});
-})(jQuery);
+}(jQuery));
 
-$(document).ready(function () {
+(function () {
 	//首页正在加载提示
-	var $load = $("#load");
-	if ($load.length > 0) {
+	var loadBg = document.getElementById("load-bg");
+	if (!!loadBg) {
 		var t = 0;
+		var isReady = false;
 		var timer = setInterval(function () {
-			t++;
-		}, 1000);
+			t += 1;
+			if (isReady && (t <= 3)) {
+				$(loadBg).fadeOut("200");//加载完成，隐藏遮罩
+				clearInterval(timer);
+			} else if (isReady && (t > 9)) {
+				$(loadBg).fadeOut("400");
+				clearInterval(timer);
+			} else if (t == 2) {
+				document.getElementById("load").style.display = "block";
+			}
+		}, 100);
 		window.onload = function () {
 			$.focus("#focus");
 			$.cardImg(".card");
-			if (t > 2) {
-				$load.fadeOut("400");
-			} else {
-				setTimeout(function () {
-					$load.fadeOut("400");
-				}, 1000);
-			}
-			clearInterval(timer);
+			isReady = true;
 		}
 	}
-	
+}());
+
+$(document).ready(function () {
 	// 绑定二级菜单功能
 	$("#navigation").find("li.second").hover(function () {
 		$(this).children("ul").stop(true,false).slideDown("fast");
@@ -219,42 +246,45 @@ $(document).ready(function () {
 	
 	//绑定回到顶部功能
 	var topBtn = document.getElementById('to-top');
-	var timer = null;
-	var isTop = true;
-	//获取页面可视区高度
-	var cHeight = document.documentElement.clientHeight;
-	//滚动时触发
-	window.onscroll = function() {
-		//获得已滚动距离
-		var top = document.documentElement.scrollTop || document.body.scrollTop;
-		if (top >= cHeight) {
-			topBtn.style.display = 'block';
-		} else {
-			topBtn.style.display = 'none';
-		}
-		
-		if (!isTop) {
-			clearInterval(timer);
-		}
-		isTop = false;
-	}
-	topBtn.onclick = function() {
-		//设置定时器
-		timer = setInterval(function(){
+	if (!!topBtn) {
+		var timer = null;
+		var isTop = true;
+		//获取页面可视区高度
+		var cHeight = document.documentElement.clientHeight;
+		//滚动时触发
+		window.onscroll = function() {
 			//获得已滚动距离
 			var top = document.documentElement.scrollTop || document.body.scrollTop;
-			//每次滚动的距离
-			var speed = Math.floor(-top / 6);
-			document.documentElement.scrollTop = document.body.scrollTop = top + speed;
+			if (top >= cHeight) {
+				topBtn.style.display = 'block';
+			} else {
+				topBtn.style.display = 'none';
+			}
 			
-			isTop = true;
-			
-			if (top == 0) {
+			if (!isTop) {
 				clearInterval(timer);
 			}
-		}, 30);
-		return false;
+			isTop = false;
+		}
+		topBtn.onclick = function() {
+			//设置定时器
+			timer = setInterval(function(){
+				//获得已滚动距离
+				var top = document.documentElement.scrollTop || document.body.scrollTop;
+				//每次滚动的距离
+				var speed = Math.floor(-top / 6);
+				document.documentElement.scrollTop = document.body.scrollTop = top + speed;
+				
+				isTop = true;
+				
+				if (top == 0) {
+					clearInterval(timer);
+				}
+			}, 30);
+			return false;
+		}
 	}
+	
 	
 	try {
 		if (window.console && window.console.log) {

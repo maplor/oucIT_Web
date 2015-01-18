@@ -579,8 +579,9 @@ body {
 	right: 0;
 	bottom: 0;
 	left: 0;
+	display: none;
 	margin: auto;
-	height: 20em;
+	height: 11em;
 	text-align: center;
 }
 .loading h1 {
@@ -588,20 +589,23 @@ body {
 	font-size: 1.5em;
 	font-weight: normal;
 	line-height: 1.5em;
+	letter-spacing: .25em;
 }
 .loading h2 {
 	margin: 0;
 	font-size: 2em;
 	line-height: 1.5em;
+	letter-spacing: .25em;
+	color: #4C87D9;
 }
 .loader {
 	position: relative;
-	width: 216px;
-	height: 216px;
+	width: 66px;
+	height: 66px;
 	margin: auto;
 	margin-top: 1em;
 }
-.loader p {
+/*.loader p {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -638,7 +642,7 @@ body {
 @keyframes loader{
 	from{transform: rotate(0deg);}
 	to{transform: rotate(360deg);}
-}
+}*/
 .container {
 	position: relative;
 	width: 960px;
