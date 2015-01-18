@@ -1,7 +1,7 @@
 // JavaScript Document
 // Author: Maplor
-// Date: 2014-11-27
-// Changes(每次修改+1): 27
+// Date: 2015-01-18
+// Changes(每次修改+1): 28
 (function() {
 	$.extend({
 		focus: function(slid) {
