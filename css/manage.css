@@ -597,10 +597,26 @@ div.admin {
 	margin: auto;
 }
 .login p {
-	margin: 1em 0;
+	margin: .5em 0;
+}
+.login p span {
+	display: block;
+	width: 20em;
+	padding: .25em 0;
+	margin: auto;
+	color: #e74c3c;
+	background-color: #f2dede;
+	border: 2px solid #ebccd1;
+	border-top: none;
+	-webkit-border-bottom-left-radius: .25em;
+	-moz-border-radius-bottomleft: .25em;
+	border-bottom-left-radius: .25em;
+	-webkit-border-bottom-right-radius: .25em;
+	-moz-border-radius-bottomright: .25em;
+	border-bottom-right-radius: .25em;
 }
 .login input {
-	width: 20em;
+	width: 21em;
 	/*line-height: 2em;*/
 	padding: .5em;
 	border: 2px solid #999;
