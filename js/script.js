@@ -78,9 +78,9 @@
 					clearInterval(picTimer);
 				},function() {
 					picTimer = setInterval(function() {
-						showPics(index);
-						index++;
+						index += 1;
 						if(index == len) {index = 0;}
+						showPics(index);
 					},5000); //此4000代表自动播放的间隔，单位：毫秒
 				}).trigger("mouseleave");
 				
@@ -199,7 +199,7 @@ $(document).ready(function () {
 	//绑定侧边栏功能
 	var $aside = $("#aside");
 	if ($aside.length > 0) {
-		//侧边栏固定位置]
+		//侧边栏固定位置
 		var top = $aside.offset().top;
 		$(window).scroll(function() {
 			if ($(window).scrollTop() > top) {
