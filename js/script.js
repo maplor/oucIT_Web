@@ -1,7 +1,7 @@
 // JavaScript Document
 // Author: Maplor
-// Date: 2015-01-18
-// Changes(每次修改+1): 28
+// Date: 2015-06-11
+// Changes(每次修改+1): 29
 (function() {
 	$.extend({
 		focus: function(slid) {
@@ -103,24 +103,135 @@
 			}
 		},
 		
-		newFocus: function(slid, hasBtn, hasNum, direction, autoTime) {
-			var $slid = $(slid);
-			if ($slid.length > 0) {
-				hasBtn = hasBtn || false;//是否生成标记导航块
-				hasNum = hasNum || false;//标记导航块是否生成数字
-				direction = direction || "left";//滚动方向
-				autoTime = autoTime || 5000;//自动播放间隔时间
-				
-				var $li = $slid.find("li"),//图片块
-					num = $li.length,//图片个数
-					slidWidth = $slid.width(),//每次移动宽度
-					index = 0,//位置标识
-					dom = "",//需要插入的dom代码
-					imgTimer,//计时器
-					supportTrans = false;//硬件加速支持标识
-				
-				if (("MozTransform" in document.documentElement.style || "WebkitTransform" in document.documentElement.style || "OTransform" in document.documentElement.style || "transform" in document.documentElement.style) && ("WebkitTransition" in document.documentElement.style || "MozTransition" in document.documentElement.style || "OTransition" in document.documentElement.style || "transition" in document.documentElement.style)) {
-					supportTrans = true;//支持CSS3 transform 和 transition 则为true
+		newFocus: function(slide, hasBtn, hasNum, direction, autoTime) {
+			var $slide = $(slide);
+			if ($slide.length <= 0) {
+				return false;
+			}
+			//配置参数
+			hasBtn = hasBtn || false;//是否生成标记导航块
+			hasNum = hasNum || false;//标记导航块是否生成数字
+			direction = direction || "left";//滚动方向
+			autoTime = autoTime || 5000;//自动播放间隔时间
+			
+			//内部参数
+			var $li = $slide.find("li"),//图片块
+				num = $li.length,//图片个数
+				slideWidth = $li.eq(0).width(),//每次移动宽度
+				index = 0,//位置标识
+				dom = "",//需要插入的dom代码
+				imgTimer = null,//计时器
+				isScrolling = false,//是否正在移动
+				supportTrans = false;//硬件加速支持标识
+			if (("MozTransform" in document.documentElement.style || "WebkitTransform" in document.documentElement.style || "OTransform" in document.documentElement.style || "transform" in document.documentElement.style) && ("WebkitTransition" in document.documentElement.style || "MozTransition" in document.documentElement.style || "OTransition" in document.documentElement.style || "transition" in document.documentElement.style)) {
+				supportTrans = true;//支持CSS3 transform 和 transition 则为true
+			}
+			
+			if( num < 3 ){
+				return false; //图片小于三张不执行
+			}
+			//dom操作
+//			if (hasBtn) {
+//				dom += "<div class='btn'" +"style='margin-left:-"+ (28*num+20)/2 +"px'>";
+//				for(var i=0; i < len; i++) {
+//					if (hasNum) {
+//						dom += "<span>" + ( i + 1 ) + "</span>"; //带数字
+//					} else {
+//						dom += "<span></span>"; //不带数字
+//					}
+//				}
+//				dom += "</div>";
+//			}
+			dom += "<div class='preNext pre'><div class='pre-btn'></div></div><div class='preNext next'><div class='next-btn'></div></div>";
+			$slide.append(dom);
+			
+			//事件绑定
+//			if (hasBtn) {
+//				//为小按钮添加鼠标滑入事件，以显示相应的内容
+//				$slide.find("div.btn span").mouseenter(function() {
+//					index = $(this).index();
+//					showPics(index);
+//				}).eq(0).trigger("mouseenter");
+//			}
+			//上一页、下一页按钮透明度处理
+			$slide.find(".preNext").css("opacity",0.6).hover(function() {
+				$(this).stop(true,false).animate({"opacity":"0.8"},200);
+			},function() {
+				$(this).stop(true,false).animate({"opacity":"0.6"},200);
+			});
+			//上一页按钮点击事件
+			$slide.on("click", ".pre", function (e) {
+				if (!isScrolling) {
+					slideLast();
+				}
+				return false;
+			});
+			//下一页按钮点击事件
+			$slide.on("click", ".next", function (e) {
+				if (!isScrolling) {
+					slideNext();
+				}
+				return false;
+			});
+			//滚动图片作居中处理
+			var showH = $li.height();
+			$li.find("img").each(function (i, e) {
+				$(this).css("margin-top", (showH - $(this).height())/2);
+			});
+			//当页面宽度改变时，相应改变数据，实现响应式
+			$(window).resize(function(e) {
+				$li.find("img").each(function (i, e) {
+					$(this).css("margin-top", (showH - $(this).height())/2);
+				});
+			});
+			//设置定时器 - 鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+			$slide.hover(function() {
+				clearInterval(imgTimer);
+			},function() {
+				imgTimer = setInterval(slideNext, autoTime);
+			}).trigger("mouseleave");
+			
+			//初始化图片位置
+			for (var i = 0; i < num; i++) {
+				if (i == num - 1) {
+					$li.eq(i).css("left", -slideWidth);
+				} else{
+					$li.eq(i).css("left", i * slideWidth);
+				}
+			}
+			
+			//图片滚动
+			function slideNext () {
+				isScrolling = true;//开始移动
+				var slideConPosition = 0,
+					slideCon = null;
+				for (var i = 0; i < num; i++) {
+					var slideCon = $li.eq(i);
+					slideConPosition = parseInt(slideCon.css("left"));
+					if (slideConPosition == -slideWidth) {//判断是第一个图片
+						slideCon.animate({left:(slideConPosition - slideWidth)}, "slow", function () {
+							$(this).css("left", slideWidth * (num - 2));//回到最后一个
+							isScrolling = false;//移动结束
+						});
+					} else{
+						slideCon.animate({left:(slideConPosition - slideWidth)}, "slow");//向左移动一格
+					}
+				}
+			}
+			function slideLast () {
+				isScrolling = true;//开始移动
+				var slideConPosition = 0,
+					slideCon = null;
+				for (var i = 0; i < num; i++) {
+					slideCon = $li.eq(i);
+					slideConPosition = parseInt(slideCon.css("left"));
+					if (slideConPosition == slideWidth * (num - 2)) {//判断是最后个图片
+						slideCon.css("left", -slideWidth)//回到第一个
+					} else{
+						slideCon.animate({left:slideConPosition + slideWidth}, "slow", function () {//向左移动一格
+							isScrolling = false;//移动结束
+						})
+					}
 				}
 			}
 		},
@@ -180,7 +291,7 @@
 			}
 		}, 100);
 		window.onload = function () {
-			$.focus("#focus");
+			$.newFocus("#focus");
 			$.cardImg(".card");
 			isReady = true;
 		}
